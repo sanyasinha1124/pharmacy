@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Faculty Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <div class="w-full max-w-sm bg-white p-8 rounded-lg shadow">
+    <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Faculty Login</h2>
+
+    <form id="loginForm" class="space-y-5">
+      <div>
+        <label for="email" class="block text-sm font-medium">Email</label>
+        <input id="email" type="email" required class="w-full px-4 py-2 border rounded" />
+      </div>
+
+      <div>
+        <label for="password" class="block text-sm font-medium">Password</label>
+        <input id="password" type="password" required class="w-full px-4 py-2 border rounded" />
+      </div>
+
+      <p id="error" class="text-red-500 text-sm hidden">Invalid credentials</p>
+
+      <button type="submit"
+        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded">
+        Login
+      </button>
+
+      <p class="text-center text-sm mt-3">Don't have an account? <a href="signup.html" class="text-blue-600 hover:underline">Create one</a></p>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      const user = JSON.parse(localStorage.getItem(email));
+
+      if (user && user.password === password) {
+        localStorage.setItem("loggedIn", "true");
+        localStorage.setItem("currentUser", email);
+        window.location.href = "dashboard.html";
+      } else {
+        document.getElementById('error').classList.remove("hidden");
+      }
+    });
+  </script>
+</body>
+</html>

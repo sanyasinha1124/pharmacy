@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Faculty Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+
+  <header class="bg-blue-700 text-white p-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">Faculty Dashboard</h1>
+      <button onclick="logout()" class="text-sm hover:underline">Logout</button>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto p-6">
+    <h2 class="text-2xl font-semibold text-gray-700 mb-6">My Folders</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="bg-white rounded shadow p-4">
+        <h3 class="text-lg font-medium text-blue-700 mb-2">Lecture Notes</h3>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li class="flex items-center"><img src="https://img.icons8.com/color/24/000000/ms-word.png" class="mr-2"> Week 1 Notes.docx</li>
+          <li class="flex items-center"><img src="https://img.icons8.com/color/24/000000/ms-word.png" class="mr-2"> Week 2 Notes.docx</li>
+        </ul>
+      </div>
+      <div class="bg-white rounded shadow p-4">
+        <h3 class="text-lg font-medium text-blue-700 mb-2">Assignments</h3>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li class="flex items-center"><img src="https://img.icons8.com/color/24/000000/ms-word.png" class="mr-2"> Assignment 1.docx</li>
+          <li class="flex items-center"><img src="https://img.icons8.com/color/24/000000/ms-word.png" class="mr-2"> Assignment 2.docx</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "index.html";
+    }
+
+    function logout() {
+      localStorage.removeItem("loggedIn");
+      localStorage.removeItem("currentUser");
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

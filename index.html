@@ -1,132 +1,127 @@
-<header style="background-color: rgba(0, 100, 0, 0.521); color: white;margin-top: 0px;padding-top: 0px;">
-    <div style="display:flex; justify-content:space-between; align-items:center ;flex-wrap:wrap;">
-      
-      <!-- Logo & Title -->
-      <!-- <div style="display:flex; align-items:center;">
-        <img src="abc.jpeg" alt="Pharmacy Logo" style="height:200px; width:auto;align-self:centre;padding-bottom: 0px;">
-        <h1 style="font-size:24px; margin:0; color:#e1e1ff;">  Sumatidevi Tompe Institute of Pharmaceutical Science and Research (STIPSR)</h1>
-      </div> -->
-      <!-- <div style="display: flex; align-items: center; flex-wrap: wrap; justify-content: center; text-align: center; padding: 10px;">
-  <img src="abc.jpeg" alt="Pharmacy Logo" style="height: 100px; width: auto; margin-right: 0px;">
-  <h1 style="font-size: 20px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 10px 0; color: #e1e1ff; max-width: 600px;">
-    Sumatidevi Tompe Institute of Pharmaceutical Science and Research 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>STIPSR</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .dropdown-content {
+      display: none;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
 
-  </h1> -->
-<!-- Responsive Header -->
-<div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-black p-4 sm:p-6">
+    @media (max-width: 768px) {
+      .dropdown-content {
+        position: static;
+      }
+    }
+  </style>
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-menu").classList.toggle("hidden");
+    }
 
-  <!-- Logo -->
-  <div class="w-20 h-20 flex-shrink-0">
-    <img src="your-logo.png" alt="Institute Logo" class="w-full h-full object-contain" />
-  </div>
+    function toggleDropdown(id) {
+      const el = document.getElementById(id);
+      el.classList.toggle("hidden");
+    }
+  </script>
+</head>
+<body class="bg-white font-sans">
 
-  <!-- Text Content -->
-  <div class="text-center sm:text-left">
-    <h1 class="text-lg sm:text-2xl font-semibold text-gray-800 leading-tight">
-      Sumatidevi Tompe Institute of Pharmaceutical Science and Research
-    </h1>
-    <p class="text-sm sm:text-base text-gray-700">
-      Approved by Government
-    </p>
-  </div>
+  <header class="bg-[#C29B52] text-white w-full font-[Poppins]">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between px-4 py-4">
+      <!-- Logo and Title -->
+      <div class="flex items-center gap-4">
+        <div class="w-20 h-20 bg-white p-1 rounded-full">
+          <img src="images/logo.jpeg" alt="Logo" class="h-full w-full object-contain rounded-full" />
+        </div>
+        <div>
+          <h1 class="text-lg sm:text-2xl font-bold">S.T. Institute of Pharmaceutical Science and Research</h1>
+          <p class="text-sm sm:text-base">Approved by PCI, MSBTE, Govt of Maharashtra</p>
+        </div>
+      </div>
 
-</div>
-
-
-
- 
-  
-  </div>
- 
-</div>
-
-
-      <!-- Hamburger Button -->
-      <div onclick="toggleMenu()" style="font-size:28px; cursor:pointer; display:none;" id="menu-icon">
+      <!-- Hamburger -->
+      <button onclick="toggleMenu()" class="md:hidden text-3xl focus:outline-none">
         ☰
+      </button>
+
+      <!-- Faculty Login (for desktop only) -->
+      <div class="hidden md:block">
+        <a href="login/login.html" class="bg-white text-[#C29B52] hover:bg-gray-100 font-semibold px-5 py-2 rounded-md shadow transition duration-200">
+          Faculty Login
+        </a>
       </div>
     </div>
 
-    <!-- Navigation -->
-    <nav>
-       <ul id="nav-links" style="list-style:none; padding:0; margin:0; display:flex; justify-content:center; flex-wrap:wrap;">
-        <li style="position:relative;"><a href="index.html" style="color:white; text-decoration:none; padding:10px 15px; display:block;">Home</a></li>
+    <!-- Navigation Links -->
+    <nav id="nav-menu" class="hidden md:flex flex-col md:flex-row md:items-center md:justify-center bg-black md:bg-transparent text-white space-y-2 md:space-y-0 py-4 md:py-0 px-4">
+      <ul class="flex flex-col md:flex-row gap-4 items-start md:items-center md:justify-center w-full md:w-auto">
+        <li><a href="index.html" class="hover:text-yellow-400">Home</a></li>
 
-
-        
-
-        <li style="position:relative;">
-          <a href="#" style="color:white; text-decoration:none; padding:10px 15px; display:block;">About Us ▼</a>
-          <div style="display:none; position:absolute; background:white; z-index:999;" class="dropdown">
-            <a href="about/about.html" style="color:black; padding:10px; display:block; text-decoration:none;">About Institute</a>
-           
-            <a href="about/vison.html" style="color:black; padding:10px; display:block; text-decoration:none;">Vision & Mission</a>
-            <a href="about/message.html" style="color:black; padding:10px; display:block; text-decoration:none;">Message</a>
-            
-            <a href="about/cdc.html" style="color:black; padding:10px; display:block; text-decoration:none;">GB/CDC</a>
-            <a href="org.html" style="color:black; padding:10px; display:block; text-decoration:none;">Organogram</a>
-            <a href="about/infrastructure.html" style="color:black; padding:10px; display:block; text-decoration:none;">Infrastructure</a>
-          </div>
-        </li>
-         <li style="position:relative;">
-          <a href="#" style="color:white; text-decoration:none; padding:10px 15px; display:block;">Affiliation ▼   </a>
-          <div style="display:none; position:absolute; background:white; z-index:999;" class="dropdown">
-            <a href="affiliation/MSBTE.html" style="color:black; padding:10px; display:block; text-decoration:none;">MSBTE</a>
-            <a href="affiliation/aishe.html" style="color:black; padding:10px; display:block; text-decoration:none;">Govt of Mah</a>
-            <a href="affiliation/aishe.html" style="color:black; padding:10px; display:block; text-decoration:none;">AISHE</a>
-            <a href="affiliation/iso.html" style="color:black; padding:10px; display:block; text-decoration:none;">ISO</a>
-          </div>
-        </li>
-        <li style="position:relative;">
-          <a href="admisson/admissions.html" style="color:white; text-decoration:none; padding:10px 15px; display:block;">R&D▼</a>
-          <div style="display:none; position:absolute; background:white; z-index:999;" class="dropdown">
-            <a href="#" style="color:black; padding:10px; display:block; text-decoration:none;">Publication</a>
-            <a href="institute.html" style="color:black; padding:10px; display:block; text-decoration:none;">Patent</a>
-            <a href="vison.html" style="color:black; padding:10px; display:block; text-decoration:none;">Copywright</a>
-            
-          </div>
-        </li>
-       
-
-        <li style="position:relative;">
-          <a href="#" style="color:white; text-decoration:none; padding:10px 15px; display:block;">Courses ▼</a>
-          <div style="display:none; position:absolute; background:white; z-index:999;" class="dropdown">
-            <a href="courses/dpharm.html" style="color:black; padding:10px; display:block; text-decoration:none;">D.Pharm</a>
+        <li class="dropdown relative md:static">
+          <span class="cursor-pointer hover:text-yellow-400 md:hidden" onclick="toggleDropdown('aboutDropdown')">About Us ▼</span>
+          <span class="hidden md:block cursor-pointer hover:text-yellow-400">About Us ▼</span>
+          <div id="aboutDropdown" class="dropdown-content absolute bg-white text-black mt-2 rounded shadow z-50 w-48 md:hidden hidden">
+            <a href="about/about.html" class="block px-4 py-2 hover:bg-gray-100">About Institute</a>
+            <a href="about/vison.html" class="block px-4 py-2 hover:bg-gray-100">Vision & Mission</a>
+            <a href="about/message.html" class="block px-4 py-2 hover:bg-gray-100">Message</a>
+            <a href="about/cdc.html" class="block px-4 py-2 hover:bg-gray-100">GB/CDC</a>
+            <a href="org.html" class="block px-4 py-2 hover:bg-gray-100">Organogram</a>
+            <a href="about/infrastructure.html" class="block px-4 py-2 hover:bg-gray-100">Infrastructure</a>
           </div>
         </li>
 
-        <li><a href="admissions.html" style="color:white; text-decoration:none; padding:10px 15px; display:block;">IQAC</a></li>
-        <li><a href="events.html" style="color:white; text-decoration:none; padding:10px 15px; display:block;">Events</a></li>
-        <li><a href="contact.html" style="color:white; text-decoration:none; padding:10px 15px; display:block;">Alumini</a></li>
-         <li style="position:relative;">
-          <a href="#" style="color:white; text-decoration:none; padding:10px 15px; display:block;">Student corner▼</a>
-          <div style="display:none; position:absolute; background:white; z-index:999;" class="dropdown">
-            <a href="bpharm.html" style="color:black; padding:10px; display:block; text-decoration:none;">Student activity</a>
+        <li><a href="faculty/faculty.html" class="hover:text-yellow-400">Faculty</a></li>
+
+        <li class="dropdown relative md:static">
+          <span class="cursor-pointer hover:text-yellow-400 md:hidden" onclick="toggleDropdown('rdDropdown')">R&D ▼</span>
+          <span class="hidden md:block cursor-pointer hover:text-yellow-400">R&D ▼</span>
+          <div id="rdDropdown" class="dropdown-content absolute bg-white text-black mt-2 rounded shadow z-50 w-48 md:hidden hidden">
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Publication</a>
+            <a href="institute.html" class="block px-4 py-2 hover:bg-gray-100">Patent</a>
+            <a href="vison.html" class="block px-4 py-2 hover:bg-gray-100">Copywright</a>
           </div>
         </li>
 
-        <li><a href="contact.html" style="color:white; text-decoration:none; padding:10px 15px; display:block;">Download</a></li>
+        <li class="dropdown relative md:static">
+          <span class="cursor-pointer hover:text-yellow-400 md:hidden" onclick="toggleDropdown('coursesDropdown')">Courses ▼</span>
+          <span class="hidden md:block cursor-pointer hover:text-yellow-400">Courses ▼</span>
+          <div id="coursesDropdown" class="dropdown-content absolute bg-white text-black mt-2 rounded shadow z-50 w-48 md:hidden hidden">
+            <a href="courses/dpharm.html" class="block px-4 py-2 hover:bg-gray-100">D.Pharm</a>
+          </div>
+        </li>
 
-        <li class="mt-2 md:mt-0">
-  <a href="login/login.html"
-     class="bg-orange-500 hover:bg-orange-600 text-white font-medium px-4 py-2 rounded-md transition duration-200 block text-center md:inline-block">
-    Faculty Login
-  </a>
-</li>
+        <li><a href="admissions.html" class="hover:text-yellow-400">IQAC</a></li>
+        <li><a href="events.html" class="hover:text-yellow-400">Events</a></li>
+        <li><a href="contact.html" class="hover:text-yellow-400">Alumni</a></li>
 
+        <li class="dropdown relative md:static">
+          <span class="cursor-pointer hover:text-yellow-400 md:hidden" onclick="toggleDropdown('studentDropdown')">Student Corner ▼</span>
+          <span class="hidden md:block cursor-pointer hover:text-yellow-400">Student Corner ▼</span>
+          <div id="studentDropdown" class="dropdown-content absolute bg-white text-black mt-2 rounded shadow z-50 w-48 md:hidden hidden">
+            <a href="bpharm.html" class="block px-4 py-2 hover:bg-gray-100">Student Activity</a>
+          </div>
+        </li>
 
-       
+        <li><a href="contact.html" class="hover:text-yellow-400">Download</a></li>
+
+        <!-- Faculty login (for mobile only) -->
+        <li class="md:hidden">
+          <a href="login/login.html" class="bg-orange-500 hover:bg-orange-600 text-white font-medium px-4 py-2 rounded-md transition duration-200 block text-center">
+            Faculty Login
+          </a>
+        </li>
       </ul>
     </nav>
   </header>
+</body>
+</html>
 
-
-    
-    
-
-
- 
-   
 
 
 

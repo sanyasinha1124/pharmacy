@@ -56,12 +56,12 @@
   <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
     <div class="text-lg font-semibold">Pharmacy College</div>
 
-    <!-- Hamburger Icon (Mobile) -->
-    <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
-      ☰
-    </button>
-  </div>
-
+     <!-- Hamburger Icon -->
+    <div class="md:hidden">
+      <button onclick="toggleMenu()" class="text-white focus:outline-none">
+        ☰
+      </button>
+    </div>
   <!-- Navigation Links -->
   <ul id="nav-links" class="hidden md:flex flex-wrap justify-center space-x-4 px-4 pb-4 md:pb-0 md:space-x-6 md:items-center text-sm md:text-base">
     <li><a href="index.html" class="block py-2 px-3 hover:text-orange-400">Home</a></li>
@@ -167,9 +167,28 @@
 
        
 
-
+   
        
       </ul>
+
+         <!-- Mobile Nav -->
+  <div id="mobile-nav" class="md:hidden hidden px-4 pb-4 text-[#D1D5DB] space-y-2 text-sm">
+    <a href="index.html" class="block">Home</a>
+    <a href="about/about.html" class="block">About Institute</a>
+    <a href="about/vison.html" class="block">Vision & Mission</a>
+    <a href="faculty/faculty.html" class="block">Faculty</a>
+    <a href="events.html" class="block">Events</a>
+    <a href="contact.html" class="block">Contact</a>
+  </div>
+</nav>
+
+<!-- JavaScript -->
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobile-nav');
+    menu.classList.toggle('hidden');
+  }
+</script>
     </nav>
   </header>
 

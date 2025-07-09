@@ -141,6 +141,22 @@
       <a href="contact.html" class="hover:text-[#C29B52]" onclick="toggleMenu()">Download</a>
     </div>
 
+  <main class="pt-24 p-6">
+    <h2 class="text-2xl font-bold">Welcome to the Pharmacy College</h2>
+    <p class="mt-2">Explore our courses and campus.</p>
+  </main>
+
+  <!-- Toggle Script -->
+  <script>
+    const mobileMenu = document.getElementById("mobileMenu");
+    const hamburgerBtn = document.getElementById("hamburgerBtn");
+
+    function toggleMenu() {
+      mobileMenu.classList.toggle("hidden");
+    }
+
+    hamburgerBtn.addEventListener("click", toggleMenu);
+  </script>
 
 
 

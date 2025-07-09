@@ -51,169 +51,96 @@
 </header>
 
 
-    <!-- Responsive Navigation -->
-<nav class="bg-black text-white font-[Poppins]">
-  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-   
+  <!-- NAVIGATION BAR -->
+<nav class="bg-black font-[Poppins]">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
+    <!-- Logo or Brand -->
+    <div class="text-white text-xl font-bold tracking-wide">
+      Pharmacy College
+    </div>
 
-    
-
-    <!-- Navigation -->
-    <nav style="background-color: black;">
-       <ul id="nav-links" style="list-style:none; padding:0; margin:0; display:flex;  font-family: 'Poppins', sans-serif; justify-content:center; flex-wrap:wrap;">
-        <li style="position:relative;"><a href="index.html" style="color:#D1D5DB; text-decoration:none; padding:10px 15px; display:block;">Home</a></li>
-
-         
-    <!-- Hamburger Icon (Right Aligned) -->
+    <!-- Hamburger Icon (Mobile Only) -->
     <div class="md:hidden">
-      <button onclick="toggleMenu()" class="text-white focus:outline-none text-3xl">
+      <button onclick="toggleMenu()" class="text-white text-3xl focus:outline-none">
         ☰
       </button>
     </div>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex space-x-6 text-sm text-gray-200 items-center">
+      <li><a href="index.html" class="hover:text-[#C29B52]">Home</a></li>
+
+      <li class="group relative">
+        <a href="#" class="hover:text-[#C29B52]">About Us ▼</a>
+        <div class="absolute hidden group-hover:block bg-white text-black mt-2 rounded shadow-lg z-50">
+          <a href="about/about.html" class="block px-4 py-2 hover:bg-gray-100">About Institute</a>
+          <a href="about/vison.html" class="block px-4 py-2 hover:bg-gray-100">Vision & Mission</a>
+          <a href="about/message.html" class="block px-4 py-2 hover:bg-gray-100">Message</a>
+          <a href="about/cdc.html" class="block px-4 py-2 hover:bg-gray-100">GB/CDC</a>
+          <a href="org.html" class="block px-4 py-2 hover:bg-gray-100">Organogram</a>
+          <a href="about/infrastructure.html" class="block px-4 py-2 hover:bg-gray-100">Infrastructure</a>
+          <a href="about/commitee.html" class="block px-4 py-2 hover:bg-gray-100">Statutory Committee</a>
+        </div>
+      </li>
+
+      <li class="group relative">
+        <a href="#" class="hover:text-[#C29B52]">Affiliation ▼</a>
+        <div class="absolute hidden group-hover:block bg-white text-black mt-2 rounded shadow-lg z-50">
+          <a href="affiliation/PCI-8486_Approval Letter_2024-25.pdf" target="_blank" class="block px-4 py-2 hover:bg-gray-100">PCI</a>
+          <a href="affiliation/Affiliation Letter MSBTE.pdf" class="block px-4 py-2 hover:bg-gray-100">MSBTE</a>
+          <a href="affiliation/MS Govt GR.pdf" class="block px-4 py-2 hover:bg-gray-100">Govt of Mah</a>
+          <a href="affiliation/DTE letter.pdf" class="block px-4 py-2 hover:bg-gray-100">DTE</a>
+          <a href="affiliation/aishe.html" class="block px-4 py-2 hover:bg-gray-100">AISHE</a>
+          <a href="affiliation/iso.html" class="block px-4 py-2 hover:bg-gray-100">ISO</a>
+        </div>
+      </li>
+
+      <li><a href="faculty/faculty.html" class="hover:text-[#C29B52]">Faculty</a></li>
+
+      <li class="group relative">
+        <a href="#" class="hover:text-[#C29B52]">R&D ▼</a>
+        <div class="absolute hidden group-hover:block bg-white text-black mt-2 rounded shadow-lg z-50">
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Publication</a>
+          <a href="institute.html" class="block px-4 py-2 hover:bg-gray-100">Patent</a>
+          <a href="vison.html" class="block px-4 py-2 hover:bg-gray-100">Copyright</a>
+        </div>
+      </li>
+
+      <li class="group relative">
+        <a href="#" class="hover:text-[#C29B52]">Courses ▼</a>
+        <div class="absolute hidden group-hover:block bg-white text-black mt-2 rounded shadow-lg z-50">
+          <a href="courses/dpharm.html" class="block px-4 py-2 hover:bg-gray-100">D.Pharm</a>
+        </div>
+      </li>
+
+      <li><a href="admissions.html" class="hover:text-[#C29B52]">IQAC</a></li>
+      <li><a href="events.html" class="hover:text-[#C29B52]">Events</a></li>
+      <li><a href="contact.html" class="hover:text-[#C29B52]">Alumni</a></li>
+
+      <li class="group relative">
+        <a href="#" class="hover:text-[#C29B52]">Student Corner ▼</a>
+        <div class="absolute hidden group-hover:block bg-white text-black mt-2 rounded shadow-lg z-50">
+          <a href="student activity/lastyearadmitted.html" class="block px-4 py-2 hover:bg-gray-100">Student Activity</a>
+          <a href="student activity/lastyearadmitted.html" class="block px-4 py-2 hover:bg-gray-100">Last Year Admitted Students</a>
+        </div>
+      </li>
+
+      <li><a href="contact.html" class="hover:text-[#C29B52]">Download</a></li>
+    </ul>
   </div>
-        
 
-        <li style="position:relative;">
-          <a href="#" style="color:white; text-decoration:none; padding:10px 15px; display:block;">About Us ▼</a>
-          <div style="display:none; position:absolute; background:white; z-index:999;" class="dropdown">
-            <a href="about/about.html" style="color:black; padding:10px; display:block; text-decoration:none;">About Institute</a>
-           
-            <a href="about/vison.html" style="color:black; padding:10px; display:block; text-decoration:none;">Vision & Mission</a>
-            <a href="about/message.html" style="color:black; padding:10px; display:block; text-decoration:none;">Message</a>
-            
-            <a href="about/cdc.html" style="color:black; padding:10px; display:block; text-decoration:none;">GB/CDC</a>
-            <a href="org.html" style="color:black; padding:10px; display:block; text-decoration:none;">Organogram</a>
-            <a href="about/infrastructure.html" style="color:black; padding:10px; display:block; text-decoration:none;">Infrastructure</a>
-            <a href="about/commitee.html" style="color:black; padding:10px; display:block; text-decoration:none;">Satuatory Committee</a>
-          </div>
-        </li>
-         <li style="position:relative;">
-          <a href="#" style="color:white; text-decoration:none; padding:10px 15px; display:block;">Affiliation ▼   </a>
-          <div style="display:none; position:absolute; background:white; z-index:999;" class="dropdown">
-            <a href="affiliation/PCI-8486_Approval Letter_2024-25.pdf" style="color:black; padding:10px; display:block; text-decoration:none;"target="_blank rel="noopener noreferrer">PCI</a>
-
-           
-            <a href="affiliation/Affiliation Letter MSBTE.pdf" style="color:black; padding:10px; display:block; text-decoration:none;">MSBTE</a>
-             <a href="affiliation/MS Govt GR.pdf" style="color:black; padding:10px; display:block; text-decoration:none;"target="_blank rel="noopener noreferrer">Govt of Mah</a>
-
-             <a href="affiliation/DTE letter.pdf" style="color:black; padding:10px; display:block; text-decoration:none;"target="_blank rel="noopener noreferrer">DTE</a>
-
-            
-            <a href="affiliation/aishe.html" style="color:black; padding:10px; display:block; text-decoration:none;">AISHE</a>
-            <a href="affiliation/iso.html" style="color:black; padding:10px; display:block; text-decoration:none;">ISO</a>
-          </div>
-        </li>
-
-<!-- 
-        <h1 class="text-4xl font-bold text-blue-700 cursor-pointer hover:underline"
-      onclick="window.location.href='faculty/faculty.html'">
-    Faculty Files
-  </h1> -->
-
-  <li><a href="faculty/faculty.html" style="color:white; text-decoration:none; padding:10px 15px; display:block;">Faculty</a></li>
-
-
-        
-        <li style="position:relative;">
-          <a href="admisson/admissions.html" style="color:white; text-decoration:none; padding:10px 15px; display:block;">R&D▼</a>
-          <div style="display:none; position:absolute; background:white; z-index:999;" class="dropdown">
-            <a href="#" style="color:black; padding:10px; display:block; text-decoration:none;">Publication</a>
-            <a href="institute.html" style="color:black; padding:10px; display:block; text-decoration:none;">Patent</a>
-            <a href="vison.html" style="color:black; padding:10px; display:block; text-decoration:none;">Copywright</a>
-            
-          </div>
-        </li>
-       
-
-        <li style="position:relative;">
-          <a href="#" style="color:white; text-decoration:none; padding:10px 15px; display:block;">Courses ▼</a>
-          <div style="display:none; position:absolute; background:white; z-index:999;" class="dropdown">
-            <a href="courses/dpharm.html" style="color:black; padding:10px; display:block; text-decoration:none;">D.Pharm</a>
-          </div>
-        </li>
-
-        <li><a href="admissions.html" style="color:white; text-decoration:none; padding:10px 15px; display:block;">IQAC</a></li>
-        <li><a href="events.html" style="color:white; text-decoration:none; padding:10px 15px; display:block;">Events</a></li>
-        <li><a href="contact.html" style="color:white; text-decoration:none; padding:10px 15px; display:block;">Alumini</a></li>
-         <li style="position:relative;">
-          <a href="#" style="color:white; text-decoration:none; padding:10px 15px; display:block;">Student Corner ▼</a>
-          <div style="display:none; position:absolute; background:white; z-index:999;" class="dropdown">
-            <a href="student activity/lastyearadmitted.html" style="color:black; padding:10px; display:block; text-decoration:none;">Student Activity</a>
-            <a href="student activity/lastyearadmitted.html" style="color:black; padding:10px; display:block; text-decoration:none;">Last year admitted students</a>
-          </div>
-        </li>
-
-        <li><a href="contact.html" style="color:white; text-decoration:none; padding:10px 15px; display:block;">Download</a></li>
-
-       
-
-   
-       
-      </ul>
-
-         <!-- Mobile Nav -->
-  <div id="mobile-nav" class="md:hidden hidden px-4 pb-4 text-[#D1D5DB] space-y-2 text-sm">
-    <a href="index.html" class="block">Home</a>
-    <a href="about/about.html" class="block">About Institute</a>
-    <a href="about/vison.html" class="block">Vision & Mission</a>
-    <a href="faculty/faculty.html" class="block">Faculty</a>
-    <a href="events.html" class="block">Events</a>
-    <a href="contact.html" class="block">Contact</a>
+  <!-- Mobile Menu (Initially Hidden) -->
+  <div id="mobileMenu" class="md:hidden hidden bg-black px-4 pb-4 text-sm text-white space-y-2">
+    <a href="index.html" class="block hover:text-[#C29B52]">Home</a>
+    <a href="about/about.html" class="block hover:text-[#C29B52]">About Us</a>
+    <a href="faculty/faculty.html" class="block hover:text-[#C29B52]">Faculty</a>
+    <a href="admissions.html" class="block hover:text-[#C29B52]">IQAC</a>
+    <a href="events.html" class="block hover:text-[#C29B52]">Events</a>
+    <a href="contact.html" class="block hover:text-[#C29B52]">Alumni</a>
+    <a href="contact.html" class="block hover:text-[#C29B52]">Download</a>
   </div>
 </nav>
 
-<!-- JavaScript -->
-<script>
-  function toggleMenu() {
-    const menu = document.getElementById('mobile-nav');
-    menu.classList.toggle('hidden');
-  }
-</script>
-    </nav>
-  </header>
-
-  <!-- Example Main Content -->
-
-  <!-- Preloader -->
-<div id="preloader" style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:#fff;display:flex;align-items:center;justify-content:center;z-index:9999;">
-  <div class="dots">
-    <span></span><span></span><span></span>
-  </div>
-</div>
-
-<style>
-.dots span {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  margin: 0 5px;
-  background: #006633;
-  border-radius: 50%;
-  animation: bounce 1.2s infinite ease-in-out;
-}
-.dots span:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.dots span:nth-child(3) {
-  animation-delay: 0.4s;
-}
-@keyframes bounce {
-  0%, 80%, 100% { transform: scale(0); }
-  40% { transform: scale(1); }
-}
-</style>
-
-
-<script>
-  window.addEventListener("load", function () {
-    setTimeout(function () {
-      document.getElementById("preloader").style.display = "none";
-      document.getElementById("main-content").style.display = "block";
-    }, 3000); // 3000ms = 3 seconds
-  });
-</script>
-
-  <main style="padding: 0px;margin: 0px;">
  
   </main>
 

@@ -6,6 +6,8 @@
     <title>College of Pharmacy - Excellence in Pharmaceutical Education</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
    
 
 </head>
@@ -20,55 +22,37 @@
     <!-- Header Section -->
   <!-- Header Section -->
    <!-- #0B4A6B   #333333-->
-  <header style="background-color: #C29B52 ; color: white;margin-top: 0px;padding-top: 0px;">
-    <div style="display:flex; justify-content:space-between; align-items:center ;flex-wrap:wrap;">
-      
-      
-
-
-<!-- Responsive Header -->
-<div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-black p-4 sm:p-6">
-
-  <!-- Logo -->
-   <div class="w-40 h-40 shrink-0">
-  <img src="images/logo.jpeg" alt="Institute Logo" class="w-full h-full object-contain" />
-</div>
-<!-- 
-  <div class="w-20 h-50-shrink-0">
-    <img src="images/logo.jpeg" alt="Institute Logo" class="w-full h-full object-contain" />
-  </div> -->
-
-  <!-- Text Content -->
-  <div class="text-center sm:text-left">
-    <h1 class="text-lg sm:text-2xl font-semibold text-white leading-tight">
-      Sumatidevi Tompe Institute of Pharmaceutical Science and Research
-    </h1>
-    <p class="text-sm sm:text-base text-gray-800">
-      Approved by PCI &Goverment of Maharashtra &affiliated bt MHBTE Mumbai
-    </p>
-  </div>
-
-</div>
-
-
-
- 
-  
-  </div>
- 
-</div>
-
-
-      <!-- Hamburger Button -->
-      <div onclick="toggleMenu()" style="font-size:28px; cursor:pointer; display:none;" id="menu-icon">
-        ☰
+  <header class="text-white" style="background-color: #C29B52; font-family: 'Poppins', sans-serif;">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between">
+    
+    <!-- Logo + Title -->
+    <div class="flex items-center gap-4">
+      <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-4 border-white p-1 bg-white">
+        <img src="images/logo.jpeg" alt="Institute Logo" class="w-full h-full object-contain rounded-full" />
+      </div>
+      <div>
+        <h1 class="text-lg sm:text-2xl font-bold leading-tight text-white">
+          Sumatidevi Tompe Institute of Pharmaceutical Science and Research
+        </h1>
+        <p class="text-sm sm:text-base text-white font-medium">
+          Approved by PCI & Government of Maharashtra & Affiliated to MSBTE Mumbai
+        </p>
       </div>
     </div>
 
+    <!-- Faculty Login Button -->
+    <div class="mt-4 md:mt-0">
+      <a href="login/login.html"
+         class="inline-block bg-white text-[#B8860B] hover:bg-gray-100 font-semibold px-5 py-2 rounded-md shadow-md transition duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2">
+        Faculty Login
+      </a>
+    </div>
+  </div>
+</header>
     <!-- Navigation -->
-    <nav>
-       <ul id="nav-links" style="list-style:none; padding:0; margin:0; display:flex; justify-content:center; flex-wrap:wrap;">
-        <li style="position:relative;"><a href="index.html" style="color:white; text-decoration:none; padding:10px 15px; display:block;">Home</a></li>
+    <nav style="background-color: black;">
+       <ul id="nav-links" style="list-style:none; padding:0; margin:0; display:flex;  font-family: 'Poppins', sans-serif; justify-content:center; flex-wrap:wrap;">
+        <li style="position:relative;"><a href="index.html" style="color:#D1D5DB; text-decoration:none; padding:10px 15px; display:block;">Home</a></li>
 
 
         
@@ -83,7 +67,6 @@
             
             <a href="about/cdc.html" style="color:black; padding:10px; display:block; text-decoration:none;">GB/CDC</a>
             <a href="org.html" style="color:black; padding:10px; display:block; text-decoration:none;">Organogram</a>
-              
             <a href="about/infrastructure.html" style="color:black; padding:10px; display:block; text-decoration:none;">Infrastructure</a>
             <a href="about/commitee.html" style="color:black; padding:10px; display:block; text-decoration:none;">Satuatory Committee</a>
           </div>
@@ -146,12 +129,7 @@
 
         <li><a href="contact.html" style="color:white; text-decoration:none; padding:10px 15px; display:block;">Download</a></li>
 
-        <li class="mt-2 md:mt-0">
-  <a href="login/login.html"
-     class="bg-orange-500 hover:bg-orange-600 text-white font-medium px-4 py-2 rounded-md transition duration-200 block text-center md:inline-block">
-    Faculty Login
-  </a>
-</li>
+       
 
 
        
@@ -529,7 +507,8 @@
 
 
 
-<footer style="background-color: #065f46;color: white; padding-bottom: 0px;margin-bottom: 0px;">
+<footer class="bg-[#C29B52] font-poppins text-lg text-gray-900 font-semibold pb-0 mb-0">
+
     <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px;margin:auto;">
 
       <!-- College Info -->
@@ -591,6 +570,38 @@
       return false;
     }
   </script>
+
+ 
+
+ 
+            
+     
+
+    
+    
+
+
+ 
+   
+
+
+
+
+  
+       
+ 
+     
+
+      
+         
+
+   
+
+
+
+
+
+  
 
  
 

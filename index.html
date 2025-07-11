@@ -117,7 +117,7 @@
   <div class="hero-slider">
     
     <!-- Slide 1 -->
-    <div class="slide active h-[85vh] bg-cover bg-center flex items-center justify-center text-center" style="background-image: url('images/page11.jpg');">
+    <div class="slide active h-[85vh] bg-cover bg-center md:bg-[center_60%] flex items-center justify-center text-center" style="background-image: url('images/page11.jpg');">
       <div class="bg-black bg-opacity-50 p-6 sm:p-12 rounded-xl text-white max-w-3xl mx-auto">
         <p class="text-lg sm:text-xl font-medium mb-2 text-yellow-300">We are the Future of Pharmaceutical Sciences</p>
         <h3 class="text-3xl sm:text-4xl font-extrabold mb-4 leading-tight">Join our legacy of excellence in pharmacy education</h3>
@@ -151,6 +151,40 @@
     <span class="dot w-4 h-4 bg-white rounded-full opacity-60 hover:opacity-100 cursor-pointer transition duration-300 border-2 border-yellow-400"></span>
     <span class="dot w-4 h-4 bg-white rounded-full opacity-60 hover:opacity-100 cursor-pointer transition duration-300 border-2 border-yellow-400"></span>
   </div>
+
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".slide");
+    const dots = document.querySelectorAll(".dot");
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("hidden", i !== index);
+        slide.classList.toggle("active", i === index);
+        dots[i].classList.toggle("opacity-100", i === index);
+        dots[i].classList.toggle("opacity-60", i !== index);
+      });
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    }
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener("click", () => {
+        currentIndex = i;
+        showSlide(i);
+      });
+    });
+
+    showSlide(currentIndex); // initial show
+    setInterval(nextSlide, 5000); // auto slide every 5 seconds
+  });
+</script>
+
 </section>
 
 

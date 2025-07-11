@@ -3,98 +3,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Committee Information</title>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <title>College Committees</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 text-gray-900 min-h-screen py-10">
-    <header class="bg-emerald-800 text-white">
-  <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between">
-    
-    <!-- Logo + Title -->
-    <div class="flex items-center gap-4">
-      <img src="logo.jpeg" alt="Institute Logo" class="w-24 h-24 sm:w-32 sm:h-32 object-contain" />
-      <div>
-        <h1 class="text-lg sm:text-2xl font-bold leading-tight">
-          Sumatidevi Tompe Institute of Pharmaceutical Science and Research
-        </h1>
-        <p class="text-sm sm:text-base text-gray-200">
-          Approved by PCI & Government of Maharashtra & Affiliated to MSBTE Mumbai
-        </p>
-      </div>
-    </div>
+<body class="bg-gray-100 text-gray-900">
 
-    <!-- Faculty Login Button -->
-    <div class="mt-4 md:mt-0">
-      <a href="login.html"
-         class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-5 py-2 rounded-md shadow-md transition duration-200 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2">
-        Faculty Login
-      </a>
-    </div>
-  </div>
-</header>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-  <h1 class="text-4xl font-bold text-center text-green-800 mb-12">📋 College Committees</h1>
-
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-    
-    <!-- Committee Card -->
-    <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 border-t-4 border-green-600">
-      <div class="flex items-center justify-center mb-4 text-green-700 text-4xl">
-        <i class="fas fa-user-shield"></i>
+  <!-- Header -->
+  <header class="bg-emerald-800 text-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between">
+      
+      <!-- Logo & Title -->
+      <div class="flex items-center gap-4">
+        <img src="logo.jpeg" alt="Institute Logo" class="w-24 h-24 sm:w-32 sm:h-32 object-contain" />
+        <div>
+          <h1 class="text-xl sm:text-2xl font-bold">
+            Sumatidevi Tompe Institute of Pharmaceutical Science and Research
+          </h1>
+          <p class="text-sm sm:text-base text-gray-200">
+            Approved by PCI, Govt. of Maharashtra & Affiliated to MSBTE Mumbai
+          </p>
+        </div>
       </div>
-      <h2 class="text-xl font-semibold text-center text-gray-800 mb-3">Anti-Sexual Harassment Committee</h2>
-      <p class="text-gray-600 text-center mb-4 text-sm">Ensuring a safe and respectful environment for all.</p>
-      <div class="text-center">
-        <a href="Anti sexual harrasment committee (Vishakha Samiti).pdf" download
-           class="inline-block bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700 transition">
-          📥 Download PDF
+
+      <!-- Faculty Login -->
+      <div class="mt-4 md:mt-0">
+        <a href="login.html"
+          class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-5 py-2 rounded-md shadow-lg transition duration-200">
+          Faculty Login
         </a>
       </div>
     </div>
+  </header>
 
-    <!-- Committee Card -->
-    <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 border-t-4 border-green-600">
-      <div class="flex items-center justify-center mb-4 text-green-700 text-4xl">
-        <i class="fas fa-balance-scale"></i>
+  <!-- Committees Section -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h2 class="text-4xl font-bold text-center text-emerald-800 mb-12">📋 College Committees</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      
+      <!-- Card Template -->
+      <div class="bg-white rounded-2xl shadow-lg border-t-4 border-emerald-700 p-6 hover:scale-105 transition-transform duration-300 group">
+        <div class="text-4xl text-emerald-700 flex justify-center mb-4">
+          <i class="fas fa-user-shield"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-center mb-3">Anti-Sexual Harassment Committee</h3>
+        <p class="text-center text-gray-600 text-sm mb-5">Ensuring a safe and respectful environment for all.</p>
+        <div class="text-center">
+          <a href="Anti sexual harrasment committee (Vishakha Samiti).pdf" download
+            class="bg-emerald-600 text-white px-5 py-2 rounded-full hover:bg-emerald-700 transition">
+            📥 Download PDF
+          </a>
+        </div>
       </div>
-      <h2 class="text-xl font-semibold text-center text-gray-800 mb-3">Grievance Redressal Committee</h2>
-      <p class="text-gray-600 text-center mb-4 text-sm">Addressing concerns and maintaining harmony.</p>
-      <div class="text-center">
-        <a href="Grievances redressal committee for faculty.pdf" download
-           class="inline-block bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700 transition">
-          📥 Download PDF
-        </a>
+
+      <div class="bg-white rounded-2xl shadow-lg border-t-4 border-emerald-700 p-6 hover:scale-105 transition-transform duration-300 group">
+        <div class="text-4xl text-emerald-700 flex justify-center mb-4">
+          <i class="fas fa-balance-scale"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-center mb-3">Grievance Redressal Committee</h3>
+        <p class="text-center text-gray-600 text-sm mb-5">Addressing concerns and maintaining harmony.</p>
+        <div class="text-center">
+          <a href="Grievances redressal committee for faculty.pdf" download
+            class="bg-emerald-600 text-white px-5 py-2 rounded-full hover:bg-emerald-700 transition">
+            📥 Download PDF
+          </a>
+        </div>
       </div>
+
+      <div class="bg-white rounded-2xl shadow-lg border-t-4 border-emerald-700 p-6 hover:scale-105 transition-transform duration-300 group">
+        <div class="text-4xl text-emerald-700 flex justify-center mb-4">
+          <i class="fas fa-user-lock"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-center mb-3">Anti-Ragging Cell</h3>
+        <p class="text-center text-gray-600 text-sm mb-5">Committed to a ragging-free campus life.</p>
+        <div class="text-center">
+          <a href="Anti-Ragging Cell.pdf" download
+            class="bg-emerald-600 text-white px-5 py-2 rounded-full hover:bg-emerald-700 transition">
+            📥 Download PDF
+          </a>
+        </div>
+      </div>
+
     </div>
+  </main>
 
-    <!-- Committee Card -->
-    <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 border-t-4 border-green-600">
-      <div class="flex items-center justify-center mb-4 text-green-700 text-4xl">
-        <i class="fas fa-user-lock"></i>
-      </div>
-      <h2 class="text-xl font-semibold text-center text-gray-800 mb-3">Anti-Ragging Cell</h2>
-      <p class="text-gray-600 text-center mb-4 text-sm">Committed to a ragging-free campus life.</p>
-      <div class="text-center">
-        <a href="Anti-Ragging Cell.pdf" download
-           class="inline-block bg-green-600 text-white px-5 py-2 rounded-full hover:bg-green-700 transition">
-          📥 Download PDF
-        </a>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-
-  <footer style="background-color: #065f46;color: white; padding-bottom: 0px;margin-bottom: 0px;">
-    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px;margin:auto;">
-
+  <!-- Footer -->
+  <footer class="bg-emerald-900 text-gray-300 py-10">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+      
       <!-- College Info -->
-      <div style="flex: 1 1 250px;">
-        <h2 style="font-size: 20px; margin :15px">🧪 Pharmacy College</h2>
-        <p style="font-size: 14px; color: #d1d5db;">
+      <div>
+        <h4 class="text-xl font-semibold mb-2">🧪 Pharmacy College</h4>
+        <p class="text-sm">
           456 Health Street<br>
           MedCity, Maharashtra 400001<br>
           📞 +91-9876543210<br>
@@ -103,55 +104,32 @@
       </div>
 
       <!-- Quick Links -->
-      <div style="flex: 1 1 250px; margin: 20px;">
-        <h2 style="font-size: 20px; margin-bottom: 15px;">Quick Links</h2>
-        <ul style="list-style: none; padding: 0; font-size: 14px; color: #d1d5db;">
-          <li><a href="#" style="color: inherit; text-decoration: none;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">DTE Maharashtra</a></li>
-          <li><a href="#" style="color: inherit; text-decoration: none;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">PCI India</a></li>
-          <li><a href="#" style="color: inherit; text-decoration: none;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">AICTE</a></li>
-          <li><a href="#" style="color: inherit; text-decoration: none;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'">University Portal</a></li>
+      <div>
+        <h4 class="text-xl font-semibold mb-2">Quick Links</h4>
+        <ul class="space-y-1 text-sm">
+          <li><a href="#" class="hover:text-white transition">DTE Maharashtra</a></li>
+          <li><a href="#" class="hover:text-white transition">PCI India</a></li>
+          <li><a href="#" class="hover:text-white transition">AICTE</a></li>
+          <li><a href="#" class="hover:text-white transition">University Portal</a></li>
         </ul>
       </div>
 
       <!-- Social Media -->
-      <div style="flex: 1 1 250px; margin: 20px;">
-        <h2 style="font-size: 20px; margin-bottom: 15px;">Follow Us</h2>
-        <div style="display: flex; gap: 15px; font-size: 18px; color: #d1d5db;">
-          <a href="#" style="color: inherit;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" style="color: inherit;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'"><i class="fab fa-instagram"></i></a>
-          <a href="#" style="color: inherit;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#d1d5db'"><i class="fab fa-linkedin-in"></i></a>
+      <div>
+        <h4 class="text-xl font-semibold mb-2">Follow Us</h4>
+        <div class="flex space-x-4 text-xl">
+          <a href="#" class="hover:text-white"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="hover:text-white"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="hover:text-white"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
 
-     
-
     </div>
 
-    <div style="text-align: center; padding-top: 20px; font-size: 13px; color: #d1d5db; border-top: 1px solid #34d399; margin-top: 30px;">
-      © 2025-2026 Sumitadevi Tompe Institute of Pharmaceutical Science. All rights reserved.
+    <div class="mt-10 text-center text-sm text-gray-400 border-t border-emerald-600 pt-4">
+      © 2025-2026 Sumatidevi Tompe Institute of Pharmaceutical Science. All rights reserved.
     </div>
   </footer>
-
-  <!-- Inline JavaScript -->
-  <script>
-    function subscribe(e) {
-      e.preventDefault();
-      const email = document.getElementById('email').value;
-      const message = document.getElementById('message');
-      const isValid = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email);
-      if (isValid) {
-        message.style.color = "#10b981";
-        message.textContent = "Thank you for subscribing!";
-        document.getElementById('email').value = '';
-      } else {
-        message.style.color = "#f87171";
-        message.textContent = "Please enter a valid email.";
-      }
-      return false;
-    }
-  </script>
-
-
 
 </body>
 </html>

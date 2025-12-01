@@ -192,78 +192,254 @@
 // };
 
 // export default Header;
-
-import React, { useState } from "react";
-import "./Header.css";
+import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
+import "./Header.css";
 
 const Header = () => {
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
+  const navRef = useRef(null);
+  const mobileRef = useRef(null);
 
-  const toggleMobileMenu = () => {
-    setMobileOpen(!mobileOpen);
+  const toggleDropdown = (menu) => {
+    setOpenDropdown((prev) => (prev === menu ? null : menu));
   };
 
-  const closeMobileMenu = () => {
-    setMobileOpen(false);
+  // Close on click outside (both desktop nav dropdowns and mobile menu)
+  useEffect(() => {
+    const onClickOutside = (e) => {
+      if (navRef.current && !navRef.current.contains(e.target)) {
+        setOpenDropdown(null);
+      }
+      if (mobileRef.current && !mobileRef.current.contains(e.target) && !e.target.closest(".hamburger")) {
+        setMobileMenuOpen(false);
+      }
+    };
+
+    const onEsc = (e) => {
+      if (e.key === "Escape") {
+        setOpenDropdown(null);
+        setMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", onClickOutside);
+    document.addEventListener("keydown", onEsc);
+    return () => {
+      document.removeEventListener("mousedown", onClickOutside);
+      document.removeEventListener("keydown", onEsc);
+    };
+  }, []);
+
+  // close mobile menu when navigating
+  const navLinkClicked = () => {
+    setMobileMenuOpen(false);
+    setOpenDropdown(null);
+  };
+
+  // Helper for desktop: open on hover (optional) and close on leave
+  const handleMouseEnter = (menu) => {
+    // only activate hover-opening on wider screens
+    if (window.innerWidth > 992) setOpenDropdown(menu);
+  };
+  const handleMouseLeave = () => {
+    if (window.innerWidth > 992) setOpenDropdown(null);
   };
 
   return (
-    <header className="header">
-
-      {/* 🔵 TOP BAR - Logo + Institute Name */}
-      <div className="header-top">
-        <div className="header-left">
+    <>
+      <header className="top-header">
+        <div className="left-section">
           <img
-            src="/logo.png"
+            src="/new-header-logo-removebg-preview.png"
             alt="Institute Logo"
             className="inst-logo"
           />
           <div className="inst-text">
             <h1>Sumatidevi Tompe Institute of Pharmaceutical Science & Research</h1>
-            <h4>Chandur Bazar, Amravati</h4>
+            <p className="sub">Chandur Bazar, Amravati</p>
+            <p className="sub-light">
+              Approved by PCI & Government of Maharashtra & DTE
+              <br />
+              "developing good minds"
+            </p>
           </div>
         </div>
 
-        {/* Mobile Hamburger */}
-        <div className="hamburger" onClick={toggleMobileMenu}>
-          <i className={`fas ${mobileOpen ? "fa-times" : "fa-bars"}`}></i>
-        </div>
-      </div>
+        <button
+          className={`hamburger ${mobileMenuOpen ? "active" : ""}`}
+          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={mobileMenuOpen}
+          onClick={() => setMobileMenuOpen((v) => !v)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+      </header>
 
-      {/* 🔵 NAVIGATION BAR */}
-      <nav className="nav-bar">
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About Us</Link></li>
-          <li><Link to="/courses">Courses</Link></li>
-          <li><Link to="/affiliation">Affiliation</Link></li>
-          <li><Link to="/faculty">Faculty</Link></li>
-          <li><Link to="/iqac">IQAC</Link></li>
-          <li><Link to="/r&d">R&D</Link></li>
-          <li><Link to="/events">Events</Link></li>
-          <li><Link to="/downloads">Downloads</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+      <nav className="nav-bar" ref={navRef} aria-label="Main navigation">
+        <ul className="nav-links">
+          <li><Link to="/" onClick={navLinkClicked}>HOME</Link></li>
+
+          <li
+            className="dropdown"
+            onMouseEnter={() => handleMouseEnter("about")}
+            onMouseLeave={handleMouseLeave}
+          >
+            <button
+              onClick={() => toggleDropdown("about")}
+              aria-haspopup="true"
+              aria-expanded={openDropdown === "about"}
+            >
+              ABOUT US <span className="caret">▾</span>
+            </button>
+
+            <ul className={`dropdown-menu ${openDropdown === "about" ? "open" : ""}`}>
+              <li><Link to="/vision" onClick={navLinkClicked}>Vision & Mission</Link></li>
+              <li><Link to="/principal" onClick={navLinkClicked}>Principal's Desk</Link></li>
+              <li><Link to="/goals" onClick={navLinkClicked}>Goals</Link></li>
+            </ul>
+          </li>
+
+          <li
+            className="dropdown"
+            onMouseEnter={() => handleMouseEnter("affiliation")}
+            onMouseLeave={handleMouseLeave}
+          >
+            <button
+              onClick={() => toggleDropdown("affiliation")}
+              aria-haspopup="true"
+              aria-expanded={openDropdown === "affiliation"}
+            >
+              AFFILIATION <span className="caret">▾</span>
+            </button>
+            <ul className={`dropdown-menu ${openDropdown === "affiliation" ? "open" : ""}`}>
+              <li><Link to="/pci" onClick={navLinkClicked}>PCI</Link></li>
+              <li><Link to="/dte" onClick={navLinkClicked}>DTE</Link></li>
+              <li><Link to="/govt" onClick={navLinkClicked}>Govt Approvals</Link></li>
+            </ul>
+          </li>
+
+          <li
+            className="dropdown"
+            onMouseEnter={() => handleMouseEnter("courses")}
+            onMouseLeave={handleMouseLeave}
+          >
+            <button
+              onClick={() => toggleDropdown("courses")}
+              aria-haspopup="true"
+              aria-expanded={openDropdown === "courses"}
+            >
+              COURSES <span className="caret">▾</span>
+            </button>
+            <ul className={`dropdown-menu ${openDropdown === "courses" ? "open" : ""}`}>
+              <li><Link to="/dpharm" onClick={navLinkClicked}>D.Pharm</Link></li>
+              <li><Link to="/bpharm" onClick={navLinkClicked}>B.Pharm</Link></li>
+            </ul>
+          </li>
+
+          <li><Link to="/faculty" onClick={navLinkClicked}>FACULTY</Link></li>
+          <li><Link to="/research" onClick={navLinkClicked}>R&D</Link></li>
+          <li><Link to="/iqac" onClick={navLinkClicked}>IQAC</Link></li>
+          <li><Link to="/alumni" onClick={navLinkClicked}>ALUMNI</Link></li>
+
+          <li
+            className="dropdown"
+            onMouseEnter={() => handleMouseEnter("events")}
+            onMouseLeave={handleMouseLeave}
+          >
+            <button
+              onClick={() => toggleDropdown("events")}
+              aria-haspopup="true"
+              aria-expanded={openDropdown === "events"}
+            >
+              EVENTS <span className="caret">▾</span>
+            </button>
+            <ul className={`dropdown-menu ${openDropdown === "events" ? "open" : ""}`}>
+              <li><Link to="/news" onClick={navLinkClicked}>News</Link></li>
+              <li><Link to="/celebrations" onClick={navLinkClicked}>Celebrations</Link></li>
+            </ul>
+          </li>
+
+          <li><Link to="/downloads" onClick={navLinkClicked}>DOWNLOADS</Link></li>
+
+          <li>
+            <Link className="faculty-btn" to="/faculty-login" onClick={navLinkClicked}>
+              FACULTY LOGIN
+            </Link>
+          </li>
         </ul>
       </nav>
 
-      {/* 🔵 MOBILE SLIDE MENU */}
-      <div className={`mobile-menu ${mobileOpen ? "open" : ""}`}>
+      {/* MOBILE SLIDE MENU */}
+      <aside
+        className={`mobile-menu ${mobileMenuOpen ? "open" : ""}`}
+        ref={mobileRef}
+        aria-hidden={!mobileMenuOpen}
+      >
         <ul>
-          <li onClick={closeMobileMenu}><Link to="/">Home</Link></li>
-          <li onClick={closeMobileMenu}><Link to="/about">About Us</Link></li>
-          <li onClick={closeMobileMenu}><Link to="/courses">Courses</Link></li>
-          <li onClick={closeMobileMenu}><Link to="/affiliation">Affiliation</Link></li>
-          <li onClick={closeMobileMenu}><Link to="/faculty">Faculty</Link></li>
-          <li onClick={closeMobileMenu}><Link to="/iqac">IQAC</Link></li>
-          <li onClick={closeMobileMenu}><Link to="/r&d">R&D</Link></li>
-          <li onClick={closeMobileMenu}><Link to="/events">Events</Link></li>
-          <li onClick={closeMobileMenu}><Link to="/downloads">Downloads</Link></li>
-          <li onClick={closeMobileMenu}><Link to="/contact">Contact</Link></li>
-        </ul>
-      </div>
+          <li><Link to="/" onClick={navLinkClicked}>HOME</Link></li>
 
-    </header>
+          <li>
+            <button
+              className="mobile-toggle"
+              onClick={() => toggleDropdown("m-about")}
+              aria-expanded={openDropdown === "m-about"}
+            >
+              ABOUT US <span className="caret">▾</span>
+            </button>
+            <ul className={`mobile-sub ${openDropdown === "m-about" ? "open" : ""}`}>
+              <li><Link to="/vision" onClick={navLinkClicked}>Vision & Mission</Link></li>
+              <li><Link to="/principal" onClick={navLinkClicked}>Principal's Desk</Link></li>
+              <li><Link to="/goals" onClick={navLinkClicked}>Goals</Link></li>
+            </ul>
+          </li>
+
+          <li>
+            <button
+              className="mobile-toggle"
+              onClick={() => toggleDropdown("m-affiliation")}
+              aria-expanded={openDropdown === "m-affiliation"}
+            >
+              AFFILIATION <span className="caret">▾</span>
+            </button>
+            <ul className={`mobile-sub ${openDropdown === "m-affiliation" ? "open" : ""}`}>
+              <li><Link to="/pci" onClick={navLinkClicked}>PCI</Link></li>
+              <li><Link to="/dte" onClick={navLinkClicked}>DTE</Link></li>
+              <li><Link to="/govt" onClick={navLinkClicked}>Govt Approvals</Link></li>
+            </ul>
+          </li>
+
+          <li>
+            <button
+              className="mobile-toggle"
+              onClick={() => toggleDropdown("m-courses")}
+              aria-expanded={openDropdown === "m-courses"}
+            >
+              COURSES <span className="caret">▾</span>
+            </button>
+            <ul className={`mobile-sub ${openDropdown === "m-courses" ? "open" : ""}`}>
+              <li><Link to="/dpharm" onClick={navLinkClicked}>D.Pharm</Link></li>
+              <li><Link to="/bpharm" onClick={navLinkClicked}>B.Pharm</Link></li>
+            </ul>
+          </li>
+
+          <li><Link to="/faculty" onClick={navLinkClicked}>FACULTY</Link></li>
+          <li><Link to="/research" onClick={navLinkClicked}>R&D</Link></li>
+          <li><Link to="/iqac" onClick={navLinkClicked}>IQAC</Link></li>
+          <li><Link to="/alumni" onClick={navLinkClicked}>ALUMNI</Link></li>
+          <li><Link to="/downloads" onClick={navLinkClicked}>DOWNLOADS</Link></li>
+
+          <li>
+            <Link className="faculty-btn" to="/faculty-login" onClick={navLinkClicked}>
+              FACULTY LOGIN
+            </Link>
+          </li>
+        </ul>
+      </aside>
+    </>
   );
 };
 

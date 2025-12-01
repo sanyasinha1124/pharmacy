@@ -1,0 +1,58 @@
+/* src/styles/GoldenTheme.css */
+
+:root {
+  /* This variable can be used throughout the new theme */
+  --golden-color: #a08c5c; 
+}
+
+/*
+  Global & Component-specific golden color updates
+*/
+
+/* Header - Golden Border for Logo and Motto Text */
+.institute-logo img {
+  border: 4px solid var(--golden-color) !important;
+}
+
+.institute-details .motto {
+  color: var(--golden-color) !important;
+}
+
+/* Header - Golden Hover for Navigation Links */
+.main-nav a:hover,
+.main-nav .dropdown-toggle:hover,
+.main-nav a.active,
+.main-nav .dropdown.active > .dropdown-toggle {
+  background-color: var(--golden-color) !important;
+  color: white !important;
+}
+
+/* Footer - Golden Headings and Link Hover */
+.footer-section h3 {
+  color: var(--golden-color) !important;
+}
+
+.footer-section ul li a:hover {
+  color: var(--golden-color) !important;
+}
+
+.footer-social h3 {
+  color: var(--golden-color) !important;
+}
+
+.social-links a:hover {
+  color: var(--golden-color) !important;
+}
+
+.footer-contact p i {
+  color: var(--golden-color) !important;
+}
+
+.footer-policy-links a:hover {
+  color: var(--golden-color) !important;
+}
+
+/* Home Page - Golden Quick Link Headings */
+.quick-link-box h4 {
+  color: var(--golden-color) !important;
+}

@@ -1,0 +1,210 @@
+.contact-us-page {
+  /* Inherits from .page-content-container */
+}
+
+.contact-us-page h2 {
+  /* Inherits styles */
+}
+
+.contact-us-page p {
+  margin-bottom: 25px;
+}
+
+.contact-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.contact-info-card {
+  background-color: #fdfdfd;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.contact-info-card h3 {
+  color: #004d80;
+  font-size: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 8px;
+}
+
+.contact-info-card p {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.contact-info-card a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-info-card a:hover {
+  text-decoration: underline;
+}
+
+.contact-form-section {
+  margin-top: 50px;
+  background-color: #e6f7ff;
+  border: 1px solid #b3e0ff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.contact-form-section h3 {
+  color: #003366;
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: calc(100% - 20px); /* Account for padding */
+  padding: 12px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.contact-form textarea {
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 120px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.location-map {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.location-map h3 {
+  color: #003366;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+
+.map-placeholder {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden; /* Ensures iframe respects border-radius */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.map-placeholder iframe {
+  border: none !important; /* Override default iframe border */
+  display: block; /* Remove extra space below iframe */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-details-grid {
+    grid-template-columns: 1fr; /* Single column on tablets */
+    gap: 20px;
+  }
+  .contact-info-card {
+    padding: 20px;
+  }
+  .contact-info-card h3 {
+    font-size: 1.3rem;
+  }
+  .contact-info-card p {
+    font-size: 0.95rem;
+  }
+  .contact-form-section {
+    padding: 25px;
+  }
+  .contact-form-section h3 {
+    font-size: 1.6rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+  .submit-button {
+    padding: 12px;
+    font-size: 1rem;
+  }
+  .location-map h3 {
+    font-size: 1.6rem;
+  }
+  .map-placeholder iframe {
+    height: 300px; /* Adjust map height for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-info-card h3 {
+    font-size: 1.2rem;
+  }
+  .contact-info-card p {
+    font-size: 0.9rem;
+  }
+  .contact-form-section h3 {
+    font-size: 1.4rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+  }
+  .submit-button {
+    font-size: 0.95rem;
+  }
+  .location-map h3 {
+    font-size: 1.4rem;
+  }
+  .map-placeholder iframe {
+    height: 250px;
+  }
+}

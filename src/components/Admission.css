@@ -1,0 +1,98 @@
+.admission-page {
+  /* Inherits from .page-content-container */
+}
+
+.admission-page h2 {
+  /* Inherits styles */
+}
+
+.admission-page .admission-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #fdfdfd;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+}
+
+.admission-page h3 {
+  color: #003366;
+  font-size: 1.6rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+
+.admission-page p {
+  margin-bottom: 1em;
+  font-size: 1rem;
+}
+
+.application-steps {
+  list-style: decimal;
+  margin-left: 20px;
+  padding-left: 0;
+  font-size: 1rem;
+}
+
+.application-steps li {
+  margin-bottom: 10px;
+}
+
+.download-button {
+  display: inline-block;
+  background-color: #28a745; /* Green button */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.download-button:hover {
+  background-color: #218838;
+  text-decoration: none;
+}
+
+.admission-page ul {
+    list-style: disc;
+    margin-left: 20px;
+    padding-left: 0;
+    font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .admission-page h2 {
+    font-size: 2rem;
+  }
+  .admission-page h3 {
+    font-size: 1.4rem;
+  }
+  .admission-page p,
+  .application-steps,
+  .admission-page ul {
+    font-size: 0.95rem;
+  }
+  .download-button {
+    padding: 8px 15px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .admission-page h2 {
+    font-size: 1.8rem;
+  }
+  .admission-page h3 {
+    font-size: 1.3rem;
+  }
+  .admission-page p,
+  .application-steps,
+  .admission-page ul {
+    font-size: 0.9rem;
+  }
+}

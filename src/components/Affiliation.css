@@ -1,0 +1,60 @@
+.affiliation-page {
+  /* Inherits from .page-content-container */
+}
+
+.affiliation-page h2 {
+  /* Inherits styles */
+}
+
+.affiliation-page p {
+  margin-bottom: 20px;
+}
+
+.affiliation-list {
+  display: grid;
+  grid-template-columns: 1fr; /* Default: single column */
+  gap: 20px;
+}
+
+.affiliation-item {
+  background-color: #f8f8f8;
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.03);
+}
+
+.affiliation-item strong {
+  color: #003366;
+  font-size: 1.3rem;
+  display: block; /* Make the strong tag a block element for spacing */
+  margin-bottom: 8px;
+}
+
+.affiliation-item p {
+  margin: 0; /* Remove default paragraph margin within list item */
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.accreditation-details h3 {
+  color: #003366;
+  font-size: 1.6rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .affiliation-list {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
+  }
+}
+
+@media (min-width: 1024px) {
+  .affiliation-list {
+    grid-template-columns: repeat(2, 1fr); /* Still two columns, good for readability */
+  }
+}

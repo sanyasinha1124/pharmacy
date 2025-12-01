@@ -1,0 +1,95 @@
+.lightbox-overlay {
+  position: fixed; /* Stays in place even when scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure it's on top of everything else */
+  backdrop-filter: blur(5px); /* Optional: adds a blur effect to the background */
+}
+
+.lightbox-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  max-width: 700px; /* Max width of the modal */
+  max-height: 90vh; /* Max height of the modal, allowing some overflow with scroll */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+  position: relative;
+  transform: scale(0.95); /* Start slightly scaled down */
+  opacity: 0; /* Start invisible */
+  animation: lightboxAppear 0.3s forwards cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+@keyframes lightboxAppear {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.lightbox-close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #555;
+  cursor: pointer;
+  padding: 5px;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.lightbox-close-button:hover {
+  color: #000;
+}
+
+.lightbox-title {
+  font-size: 2rem;
+  color: #004d80;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.lightbox-body {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify; /* Justify text for better readability */
+}
+
+/* Responsive adjustments for lightbox */
+@media (max-width: 768px) {
+  .lightbox-content {
+    max-width: 90%;
+    padding: 20px;
+  }
+  .lightbox-title {
+    font-size: 1.8rem;
+  }
+  .lightbox-body {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .lightbox-content {
+    padding: 15px;
+  }
+  .lightbox-title {
+    font-size: 1.5rem;
+  }
+  .lightbox-close-button {
+    font-size: 1.8rem;
+    top: 10px;
+    right: 10px;
+  }
+}

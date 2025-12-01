@@ -1,0 +1,94 @@
+/* Import Google Fonts for a consistent and professional look */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Main container for the President's message page */
+.president-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Title styling */
+.president-title {
+    color: #004d40;
+    font-size: 3em;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* Underline effect for the title, matching other components */
+.president-title::after {
+    content: '';
+    width: 100%; /* Made full length */
+    height: 4px;
+    background-color: #a08c5c;
+    position: absolute;
+    bottom: -15px;
+    left: 0; /* Aligned to the left edge */
+    transform: none; /* Removed centering */
+    border-radius: 2px;
+}
+
+/* Paragraph styling */
+.president-paragraph {
+    font-size: 1.1em;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 992px) {
+    .president-container {
+        margin: 20px;
+        padding: 25px;
+    }
+    .president-title {
+        font-size: 2.5em;
+    }
+    .president-paragraph {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .president-container {
+        margin: 15px;
+        padding: 20px;
+    }
+    .president-title {
+        font-size: 2em;
+        margin-bottom: 25px;
+    }
+    .president-title::after {
+        width: 100%; /* Made full length for mobile */
+        bottom: -10px;
+    }
+    .president-paragraph {
+        font-size: 0.95em;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .president-container {
+        padding: 15px;
+    }
+    .president-title {
+        font-size: 1.8em;
+    }
+    .president-title::after {
+        width: 100%; /* Made full length for mobile */
+    }
+    .president-paragraph {
+        font-size: 0.9em;
+    }
+}

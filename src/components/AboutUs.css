@@ -1,0 +1,79 @@
+/* Reusable container for most page content */
+.page-content-container {
+  padding: 30px 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  line-height: 1.6;
+  color: #333;
+}
+
+.about-us-page h2 {
+  color: #004d80;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-us-page h3 {
+  color: #003366;
+  font-size: 1.6rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+
+.about-us-page p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.about-us-page ul {
+  list-style: disc; /* Use bullet points */
+  margin-left: 20px;
+  padding-left: 0;
+  font-size: 1rem;
+}
+
+.about-us-page ul li {
+  margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .page-content-container {
+    padding: 20px 15px;
+    margin: 15px auto;
+  }
+  .about-us-page h2 {
+    font-size: 2rem;
+  }
+  .about-us-page h3 {
+    font-size: 1.4rem;
+  }
+  .about-us-page p,
+  .about-us-page ul li {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-content-container {
+    margin: 10px auto;
+    border-radius: 0; /* Remove border-radius on very small screens for full width look */
+    box-shadow: none; /* Remove shadow on very small screens */
+  }
+  .about-us-page h2 {
+    font-size: 1.8rem;
+  }
+  .about-us-page h3 {
+    font-size: 1.3rem;
+  }
+  .about-us-page p,
+  .about-us-page ul li {
+    font-size: 0.9rem;
+  }
+}

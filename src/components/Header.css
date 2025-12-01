@@ -1,320 +1,139 @@
-.main-header {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  background: #f5f5f5;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  position: relative;
-  z-index: 999;
-}
-
-/* ==========================================
-   INSTITUTE INFO SECTION
-========================================== */
-.institute-info-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 40px;
-  background: whitesmoke;
-  border-bottom: 1px solid #ddd;
-}
-
-.institute-details-container {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.institute-details-container img {
-  height: 120px;
-  width: auto;
-}
-
-.institute-details h1 {
-  font-size: 22px;
+/* GLOBAL RESET */
+* {
   margin: 0;
-  font-weight: 800;
-  color: #064420;
-  line-height: 1.25;
-  text-transform: uppercase;
-}
-
-.institute-details h3 {
-  font-size: 17px;
-  margin: 4px 0;
-  font-weight: 600;
-  color: #222;
-}
-
-.institute-details p {
-  margin: 2px 0;
-  font-size: 14px;
-  color: #555;
-}
-
-.motto {
-  font-style: italic;
-  font-size: 15px !important;
-  color: #d4a017;
-  font-weight: 600;
-}
-
-/* ==========================================
-   HAMBURGER MENU
-========================================== */
-.hamburger-menu {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: #064420;
-}
-
-/* ==========================================
-   NAVIGATION BAR
-========================================== */
-.main-nav {
-  width: 100%;
-  background: whitesmoke;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  /* padding-left: 40px;
-  padding-right: 40px; */
-  height: 30px;
-}
-
-.main-nav ul {
-  display: flex;
-  align-items: center;
-  gap: 34px;
-  list-style: none;
-  padding: 14px 20px;
-  margin: 0;
-}
-
-.main-nav ul li a,
-.main-nav ul li .dropdown-toggle {
-  color: white;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 0.3px;
-  cursor: pointer;
-  padding-bottom: 5px;
-  position: relative;
-}
-
-.main-nav ul li a::after,
-.main-nav ul li .dropdown-toggle::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background-color: #b59357;
-  bottom: 0;
-  left: 0;
-  transition: width 0.35s ease;
-}
-
-.main-nav ul li a:hover::after,
-.main-nav ul li .dropdown-toggle:hover::after {
-  width: 100%;
-}
-
-/* ==========================================
-   FACULTY LOGIN BUTTON
-========================================== */
-.faculty-login-btn {
-  background: #b59357; /* gold */
-  color: #ffffff !important; /* white text */
-  padding: 6px 16px; /* smaller size */
-  border: 2px solid #000; /* black border */
-  border-radius: 8px; /* rectangle with soft corners */
-  font-size: 14px; /* smaller text */
-  font-weight: 600;
-  transition: 0.3s ease;
-  position: relative;
-  top: 0; /* proper alignment */
-}
-
-.faculty-login-btn:hover {
-  background: #b28715; /* darker gold hover */
-  transform: translateY(-2px);
-}
-
-/* ==========================================
-   DROPDOWN MENU
-========================================== */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-content {
-  position: absolute;
-  top: 42px;
-  left: 0;
-  min-width: 220px;
-  background:#064420;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
-  border-radius: 8px;
-  padding: 12px 0;
-  display: flex;
-  flex-direction: column;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(12px);
-  transition: all 0.25s ease;
-  z-index: 1000;
-}
-
-.dropdown.active .dropdown-content {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0px);
-}
-
-.dropdown-content a {
-  display: block;
-  padding: 10px 16px;
-  font-size: 14px;
-  color: #ffffff;
-  background: #064420;
-  text-decoration: none;
-  transition: 0.2s ease;
-}
-
-.dropdown-content a:hover {
-  background: #046135;
-  color: #fff;
-}
-
-/* ==========================================
-   NESTED DROPDOWN
-========================================== */
-.dropdown-nested {
-  padding: 10px 16px;
-  cursor: pointer;
-}
-
-.dropdown-toggle-nested {
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-  color: white;
-}
-
-.dropdown-content-nested {
-  background: #fafafa;
-  margin-left: 10px;
-  border-left: 3px solid #d4a017;
-  padding: 8px 0;
-  opacity: 0;
-  visibility: hidden;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.25s ease;
-}
-
-.dropdown-nested.active .dropdown-content-nested {
-  opacity: 1;
-  visibility: visible;
-  max-height: 200px;
-}
-
-.dropdown-content-nested a {
-  color: #222;
-  padding: 8px 16px;
-}
-
-.dropdown-content-nested a:hover {
-  background: #ececec;
-  color: #064420;
-}
-
-/* ==========================================
-   MOBILE MENU
-========================================== */
-.mobile-menu-container {
-  display: none;
-  flex-direction: column;
-  background: #064420;
-  width: 100%;
-  padding: 15px 20px;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  transform: translateY(-20px);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.4s ease;
-}
-
-.mobile-menu-container.open {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0px);
-}
-
-.mobile-menu {
-  list-style: none;
   padding: 0;
-  margin: 0;
+  box-sizing: border-box;
 }
 
-.mobile-menu li {
-  margin: 14px 0;
+.header {
+  width: 100%;
+  background: #002d62; /* Premium Navy Blue */
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* 🔵 TOP SECTION (LOGO + NAME) */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 25px;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.inst-logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.inst-text h1 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.inst-text h4 {
+  font-size: 0.9rem;
+  margin-top: 3px;
+  opacity: 0.9;
+}
+
+/* 🔵 HAMBURGER BUTTON */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* 🔵 NAVIGATION MENU */
+.nav-bar {
+  background: #003b80;
+  padding: 10px 0;
+}
+
+.nav-bar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-bar a {
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.nav-bar a:hover {
+  color: #ffcc00; /* Gold hover */
+}
+
+/* 🔵 MOBILE MENU */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100%;
+  background: #002d62;
+  padding: 40px 20px;
+  transition: 0.4s ease;
+  z-index: 9999;
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
 .mobile-menu a {
   color: white;
-  font-size: 16px;
+  font-size: 18px;
   text-decoration: none;
 }
 
-/* ==========================================
-   RESPONSIVE DESIGN
-========================================== */
+.mobile-menu a:hover {
+  color: #ffcc00;
+}
+
+/* 🔵 RESPONSIVE RULES */
 @media (max-width: 900px) {
-  .main-nav ul {
+  
+  /* Hide desktop nav */
+  .nav-bar {
     display: none;
   }
 
-  .hamburger-menu {
+  /* Show hamburger */
+  .hamburger {
     display: block;
   }
 
-  .institute-details h1 {
-    font-size: 18px;
+  /* Institute title responsive */
+  .inst-text h1 {
+    font-size: 1rem;
   }
 
-  .institute-info-section {
-    padding: 14px 20px;
+  .inst-text h4 {
+    font-size: 0.75rem;
   }
 
-  .institute-details-container img {
-    height: 85px;
-  }
-
-  .mobile-menu-container {
-    display: flex;
-  }
-}
-
-@media (max-width: 600px) {
-  .institute-details-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .institute-details-container img {
-    height: 70px;
-  }
-
-  .institute-details h1 {
-    font-size: 17px;
-  }
-
-  .institute-details h3 {
-    font-size: 15px;
+  .inst-logo {
+    width: 60px;
+    height: 60px;
   }
 }

@@ -39,7 +39,7 @@ a {
   object-fit: contain;
 }
 .inst-text h1 {
-  font-size: 1.05rem;
+  font-size: 1.5rem;
   color: var(--primary);
   line-height: 1.1;
   font-weight: 700;

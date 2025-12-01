@@ -21,7 +21,7 @@
 }
 
 .notifications-section h3 {
-  color: #004d40;
+  color: #14143c;
   border-bottom: 2px solid #e0e0e0;
   padding-bottom: 1rem;
   margin-bottom: 1.5rem;
@@ -29,7 +29,7 @@
   font-size: 2rem;
 }
 .quick-links-section h3 {
-  color: #004d40;
+  color: #14143c;
   border-bottom: 2px solid #e0e0e0;
   padding-bottom: 1rem;
   margin-bottom: 1.5rem;
@@ -37,7 +37,7 @@
   font-size: 2rem;
 }
 .admission-enquiry-form h2 {
-  color: #004d40;
+  color: #14143c;
   border-bottom: 2px solid #e0e0e0;
   padding-bottom: 1rem;
   margin-bottom: 1.5rem;
@@ -167,6 +167,7 @@
 .admission-enquiry-form .form-group {
   margin-bottom: 1rem;
   text-align: left;
+  color: #14143c;
 }
 
 .admission-enquiry-form label {
@@ -204,7 +205,7 @@
 }
 
 .join-whatsapp-btn {
-  width: 90%;
+  width: 100%;
   padding: 1rem;
   color: white;
   border: none;

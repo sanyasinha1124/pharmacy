@@ -15,7 +15,7 @@ import GBCDC from './components/GBCDC';
 import Organogram from './components/Organogram';
 import Infrastructure from './components/Infrastructure';
 import StatutoryCommittee from './components/StatutoryCommittee';
-import Chairman from './components/Chairman';
+
 import Secretary from './components/Secretary';
 import Principal from './components/Principal';
 import President from './components/President';

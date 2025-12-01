@@ -44,7 +44,7 @@ const Footer = () => {
         <div className="footer-section footer-social">
           <h3>Connect with Us</h3>
           <div className="social-links">
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="/" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-facebook-f"></i>
             </a>
             <a href="https://www.instagram.com/stipsr_pharmacy?igsh=MWs4ODI4M3VmMTg1Ng==" target="_blank" rel="noopener noreferrer">

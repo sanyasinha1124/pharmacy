@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { getFunctions, httpsCallable } from 'firebase/functions';
+// import { getFunctions, httpsCallable } from 'firebase/functions';
 //import { app } from '../firebaseConfig';
-import { Book, Calendar, FlaskConical, Headset, MapPin, Mail, Phone } from 'lucide-react';
+import { Book, Calendar, FlaskConical, Headset} from 'lucide-react';
 
 import './Home.css';
 

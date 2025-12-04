@@ -1,79 +1,100 @@
-/* Reusable container for most page content */
+/* Main Content Card */
 .page-content-container {
-  padding: 30px 20px;
-  max-width: 900px;
-  margin: 20px auto;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  line-height: 1.6;
-  color: #333;
+  padding: 35px 25px;
+  max-width: 950px;
+  margin: 25px auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 33, 71, 0.08);
+  line-height: 1.7;
+  color: #1a1a1a;
+  border-left: 6px solid #0059b3; /* Highlight Accent */
+  transition: 0.3s ease-in-out;
 }
 
+/* Smooth hover elevation */
+.page-content-container:hover {
+  box-shadow: 0 6px 28px rgba(0, 33, 71, 0.12);
+}
+
+/* Main Page Title */
 .about-us-page h2 {
-  color: #004d80;
-  font-size: 2.2rem;
-  margin-bottom: 20px;
+  color: #002147; /* Navy Blue */
+  font-size: 2.4rem;
+  margin-bottom: 25px;
   text-align: center;
-}
-
-.about-us-page h3 {
-  color: #003366;
-  font-size: 1.6rem;
-  margin-top: 30px;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #eee;
+  font-weight: 700;
+  border-bottom: 3px solid #0059b3;
+  display: inline-block;
   padding-bottom: 5px;
 }
 
-.about-us-page p {
+/* Section Headings */
+.about-us-page h3 {
+  color: #0059b3; /* Royal Blue */
+  font-size: 1.7rem;
+  margin-top: 35px;
   margin-bottom: 15px;
-  font-size: 1rem;
+  border-left: 4px solid #d4a017; /* Golden Accent */
+  padding-left: 10px;
+  font-weight: 600;
 }
 
+/* Paragraph Styling */
+.about-us-page p {
+  margin-bottom: 15px;
+  font-size: 1.06rem;
+  color: #333;
+}
+
+/* Bullet List */
 .about-us-page ul {
-  list-style: disc; /* Use bullet points */
-  margin-left: 20px;
+  list-style: disc;
+  margin-left: 25px;
   padding-left: 0;
-  font-size: 1rem;
+  font-size: 1.05rem;
 }
 
 .about-us-page ul li {
   margin-bottom: 10px;
+  line-height: 1.5;
+  padding-left: 5px;
 }
 
-/* Responsive adjustments */
+/* ----- Responsive Adjustments ----- */
 @media (max-width: 768px) {
   .page-content-container {
-    padding: 20px 15px;
-    margin: 15px auto;
+    padding: 25px 18px;
+    margin: 18px auto;
   }
   .about-us-page h2 {
-    font-size: 2rem;
+    font-size: 2.1rem;
   }
   .about-us-page h3 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
   .about-us-page p,
   .about-us-page ul li {
-    font-size: 0.95rem;
+    font-size: 0.98rem;
   }
 }
 
 @media (max-width: 480px) {
   .page-content-container {
     margin: 10px auto;
-    border-radius: 0; /* Remove border-radius on very small screens for full width look */
-    box-shadow: none; /* Remove shadow on very small screens */
+    border-radius: 0;
+    box-shadow: none;
+    border-left: none;
+    border-top: 4px solid #0059b3;
   }
   .about-us-page h2 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
   .about-us-page h3 {
-    font-size: 1.3rem;
+    font-size: 1.35rem;
   }
   .about-us-page p,
   .about-us-page ul li {
-    font-size: 0.9rem;
+    font-size: 0.92rem;
   }
 }

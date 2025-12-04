@@ -420,8 +420,8 @@ const Header = () => {
               ABOUT US <span className="caret">▾</span>
             </button>
             <ul className={`mobile-sub ${openDropdown === "m-about" ? "open" : ""}`}>
-              <li><Link to="/about-us/institute" onClick={navLinkClicked}>Vision & Mission</Link></li>
-              <li><Link to="/about-us/vision-mission" onClick={navLinkClicked}>About Institute</Link></li>
+              <li><Link to="/about-us/institute" onClick={navLinkClicked}>About Institute</Link></li>
+              <li><Link to="/about-us/vision-mission" onClick={navLinkClicked}>Vison & Mission</Link></li>
               <li><Link to="/about-us/gb-cdc" onClick={navLinkClicked}>Message</Link></li>
               <li><Link to="/about-us/organogram" onClick={navLinkClicked}>GB/CDC</Link></li>
               <li><Link to="/about-us/infrastructure" onClick={navLinkClicked}>Organogram</Link></li>

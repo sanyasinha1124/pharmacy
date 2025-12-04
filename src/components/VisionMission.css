@@ -136,13 +136,17 @@
   }
 } */
 :root {
-  --green-main: #074833;
-  --green-light: #0a6b4b;
-  --mint: #2fffd5;
-  --text-dark: #013220;
-  --card-bg: rgba(255, 255, 255, 0.8);
+  --navy-main: #0f1930; /* Primary Deep Navy */
+  --navy-light: #1d2b48; /* Softer Navy for accents */
+  --gold-bronze: #ba965a; /* Elegant Bronze */
+  --mint: black; /* Highlight Mint */
+  --text-dark: #0d1b2a; /* Deep readable text */
+  --card-bg: rgba(255, 255, 255, 0.85);
 }
 
+/* ===========================
+   MAIN CONTAINER
+=========================== */
 .vm-container {
   max-width: 1100px;
   margin: auto;
@@ -150,30 +154,36 @@
   position: relative;
 }
 
+/* ===========================
+   PAGE HEADER
+=========================== */
 .vm-title {
   text-align: center;
-  font-size: 2.6rem;
+  font-size: 2.7rem;
   font-weight: 800;
-  color: var(--green-main);
+  color: var(--navy-main);
+  letter-spacing: 0.5px;
 }
 
 .vm-subtitle {
   text-align: center;
-  font-size: 1.1rem;
-  margin-top: 5px;
-  margin-bottom: 40px;
-  opacity: 0.8;
+  font-size: 1.12rem;
+  margin-top: 6px;
+  margin-bottom: 38px;
+  opacity: 0.75;
 }
 
-/* ===== Cards ===== */
+/* ===========================
+   CARDS
+=========================== */
 .vm-card {
   background: var(--card-bg);
-  padding: 30px;
-  margin: 25px 0;
-  border-radius: 16px;
-  border-left: 8px solid var(--green-main);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-  backdrop-filter: blur(12px);
+  padding: 32px;
+  margin: 26px 0;
+  border-radius: 18px;
+  border-left: 8px solid var(--gold-bronze);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(14px);
   transform: translateY(40px);
   opacity: 0;
   transition: all 0.6s ease;
@@ -181,17 +191,30 @@
 
 .vm-card.show {
   opacity: 1;
-  transform: translateY(0px);
+  transform: translateY(0);
 }
 
+/* ===========================
+   CARD HEADINGS
+=========================== */
 .vm-card h3 {
-  font-size: 1.7rem;
-  color: var(--green-main);
+  font-size: 1.8rem;
+  color: var(--navy-main);
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  font-weight: 700;
 }
 
+/* Icon glow */
+.vm-card h3 i {
+  color: var(--mint);
+  text-shadow: 0 0 14px var(--mint);
+}
+
+/* ===========================
+   TEXT INSIDE CARDS
+=========================== */
 .vm-card p,
 .vm-card li {
   line-height: 1.7;
@@ -203,34 +226,35 @@
   padding-left: 25px;
 }
 
-/* Icons glow effect */
-.vm-card h3 i {
-  color: var(--mint);
-  text-shadow: 0 0 12px var(--mint);
-}
-
-/* Motto styling */
+/* ===========================
+   MOTTO & TAGLINE
+=========================== */
 .motto {
-  font-size: 1.3rem;
+  font-size: 1.28rem;
   font-style: italic;
-  color: var(--green-light);
+  color: var(--navy-light);
   margin-top: 8px;
 }
 
-/* Tagline */
 .tagline {
   font-size: 1.25rem;
   font-weight: 600;
   margin-top: 8px;
-  color: var(--text-dark);
+  color: var(--navy-main);
 }
 
-/* Responsive */
+/* ===========================
+   RESPONSIVE
+=========================== */
 @media (max-width: 768px) {
   .vm-card {
     padding: 22px;
+    border-left-width: 6px;
   }
   .vm-title {
-    font-size: 2.1rem;
+    font-size: 2.2rem;
+  }
+  .vm-card h3 {
+    font-size: 1.5rem;
   }
 }

@@ -71,7 +71,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="footer-bottom-content">
           <p>© {new Date().getFullYear()} Sumatidevi Tompe Institute. All rights reserved.</p>
-          <p>Designed with ❤️ by Your Name/Organization</p>
+          <p>Designed with ❤️ by STIPSR</p>
           <div className="footer-policy-links">
             <Link to="/privacy-policy">Privacy Policy</Link>
             <Link to="/terms-of-service">Terms of Service</Link>

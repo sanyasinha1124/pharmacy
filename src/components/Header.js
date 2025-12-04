@@ -297,9 +297,13 @@ const Header = () => {
             </button>
 
             <ul className={`dropdown-menu ${openDropdown === "about" ? "open" : ""}`}>
-              <li><Link to="/vision" onClick={navLinkClicked}>Vision & Mission</Link></li>
-              <li><Link to="/principal" onClick={navLinkClicked}>Principal's Desk</Link></li>
-              <li><Link to="/goals" onClick={navLinkClicked}>Goals</Link></li>
+              <li><Link to="/about-us/institute" onClick={navLinkClicked}>About</Link></li>
+              <li><Link to="/about-us/vision-mission" onClick={navLinkClicked}>Vision & Mission</Link></li>
+              <li><Link to="/about-us/gb-cdc" onClick={navLinkClicked}>GB/CDC</Link></li>
+              <li><Link to="/about-us/organogram" onClick={navLinkClicked}>Organogram</Link></li>
+              <li><Link to="/about-us/infrastructure" onClick={navLinkClicked}>Infrastructure</Link></li>
+              <li><Link to="/about-us/statutory-committee" onClick={navLinkClicked}>Satuatory Commitee</Link></li>
+
             </ul>
           </li>
 
@@ -316,9 +320,12 @@ const Header = () => {
               AFFILIATION <span className="caret">▾</span>
             </button>
             <ul className={`dropdown-menu ${openDropdown === "affiliation" ? "open" : ""}`}>
-              <li><Link to="/pci" onClick={navLinkClicked}>PCI</Link></li>
-              <li><Link to="/dte" onClick={navLinkClicked}>DTE</Link></li>
-              <li><Link to="/govt" onClick={navLinkClicked}>Govt Approvals</Link></li>
+              <li><Link to="/affiliation/pci" onClick={navLinkClicked}>PCI</Link></li>
+              <li><Link to="/affiliation/msbte" onClick={navLinkClicked}>MSBTE</Link></li>
+              <li><Link to="/affiliation/gov-of-mah" onClick={navLinkClicked}>Govt Approvals</Link></li>
+              <li><Link to="/affiliation/dte" onClick={navLinkClicked}>DTE</Link></li>
+              <li><Link to="/affiliation/aishe" onClick={navLinkClicked}>AISHE</Link></li>
+              <li><Link to="/affiliation/iso" onClick={navLinkClicked}>ISO</Link></li>
             </ul>
           </li>
 

@@ -1,15 +1,15 @@
 /* ==========================================================================
    Faculty Component Global Styles
    ========================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
 
 :root {
   /* Colors */
   --primary-color: #343a40; /* Deep Charcoal Gray */
-  --secondary-color: #CD7F32; /* Bronze */
-  --accent-color: #CD7F32;
-  --bg-color-light: #F8F9FA; /* Soft Off-White */
+  --secondary-color: #cd7f32; /* Bronze */
+  --accent-color: #cd7f32;
+  --bg-color-light: #f8f9fa; /* Soft Off-White */
   --text-color-dark: #212529; /* Even deeper charcoal for body text */
   --text-color-light: #6c757d; /* Muted gray for secondary text */
   --text-color-white: #ffffff;
@@ -21,9 +21,8 @@
   --table-row-even-bg: #f9f9f9; /* Slightly off-white for even rows */
   --table-row-hover-bg: #e6f7f5; /* Light green on row hover */
 
-
   /* Fonts */
-  --font-family-poppins: 'Poppins', sans-serif;
+  --font-family-poppins: "Poppins", sans-serif;
   --font-family-sans: Arial, sans-serif;
 
   /* Spacing & Sizing */
@@ -31,7 +30,7 @@
   --spacing-md: 2rem;
   --spacing-lg: 3rem;
   --container-max-width: 1200px;
-  
+
   /* Components */
   --box-shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.1);
   --box-shadow-md: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -44,7 +43,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--bg-color-light);
-  color: var(--text-color-dark);
+  color: whitesmoke;
 }
 
 .container {
@@ -55,205 +54,204 @@ body {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow-md);
   line-height: 1.8;
-  color: #004d40;
+  color: #14143c;
 }
 
 .page-title {
   /* color: var(--primary-color);  <-- This line should be changed or commented out */
-  color: #004d40; /* Applied the requested dark green color directly */
-  font-size:2em;
+  color: #14143c; /* Applied the requested dark green color directly */
+  font-size: 2em;
   margin-bottom: var(--spacing-md);
   text-align: center;
-  
 }
-
 
 /* ==========================================================================
    Faculty Table List Styles
    ========================================================================== */
 .faculty-table-container {
-    overflow-x: auto; /* Ensures table is scrollable on small screens */
-    margin-top: var(--spacing-md);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow-md);
-    background-color: var(--text-color-white);
+  overflow-x: auto; /* Ensures table is scrollable on small screens */
+  margin-top: var(--spacing-md);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-md);
+  background-color: var(--text-color-white);
 }
 
 .faculty-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: left;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
 }
 
 .faculty-table th,
 .faculty-table td {
-    padding: 15px 20px;
-    border: 1px solid var(--table-border-color);
+  padding: 15px 20px;
+  border: 1px solid var(--table-border-color);
 }
 
 .faculty-table th {
-    background-color: var(--table-header-bg);
-    color: var(--table-header-text);
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 0.05em;
+  background-color: var(--table-header-bg);
+  color: var(--table-header-text);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
 }
 
 .faculty-table tbody tr:nth-child(even) {
-    background-color: var(--table-row-even-bg);
+  background-color: var(--table-row-even-bg);
 }
 
 .faculty-table tbody tr:hover {
-    background-color: var(--table-row-hover-bg);
-    cursor: pointer;
+  background-color: var(--table-row-hover-bg);
+  cursor: pointer;
 }
 
 .faculty-table .resume-link {
-    color: var(--nav-green-color);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s ease;
+  color: #14143c;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 .faculty-table .resume-link:hover {
-    color: var(--link-hover-color);
-    text-decoration: underline;
+  color: var(--link-hover-color);
+  text-decoration: underline;
 }
 
 .faculty-table .faculty-name-link {
-    color: var(--text-color-dark); /* Or any color you prefer for the clickable name */
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s ease;
+  color: var(
+    --text-color-dark
+  ); /* Or any color you prefer for the clickable name */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 .faculty-table .faculty-name-link:hover {
-    color: var(--nav-green-color); /* Highlight on hover */
-    text-decoration: underline;
+  color: var(--nav-green-color); /* Highlight on hover */
+  text-decoration: underline;
 }
-
 
 /* ==========================================================================
    Faculty Details Page Styles (for the screenshot you provided)
    ========================================================================== */
 
 .faculty-details-container {
-    margin-top: 3rem;
-    background-color: #f7f7f7;
-    padding: 3rem; 
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  margin-top: 3rem;
+  background-color: #f7f7f7;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .faculty-details-container .profile-image-container {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .faculty-details-container .profile-image-wrapper {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 4px solid #e0e0e0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .faculty-details-container .profile-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .faculty-details-container .profile-image-wrapper svg {
-    width: 80px;
-    height: 80px;
-    color: #bdbdbd;
+  width: 80px;
+  height: 80px;
+  color: #bdbdbd;
 }
 
 .faculty-name-details {
-    font-size: 3rem; 
-    font-weight: 600;
-    color: #004d40;
-    margin-top: 0;
-    margin-bottom: 2rem;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #004d40;
+  margin-top: 0;
+  margin-bottom: 2rem;
 }
 
 /* Table styling for details (if you choose to use a table here) */
 .faculty-details-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 0 auto;
-    font-size: 1.5rem; 
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 1.5rem;
 }
 
 .faculty-details-table tr:nth-child(even) {
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
 .faculty-details-table td {
-    padding: 20px; 
-    border: 1px solid #ccc;
-    vertical-align: top;
+  padding: 20px;
+  border: 1px solid #ccc;
+  vertical-align: top;
 }
 
 .detail-label {
-    font-weight: 600;
-    color: #333;
-    width: 40%;
-    text-align: left;
-    padding-left: 15px;
+  font-weight: 600;
+  color: #333;
+  width: 40%;
+  text-align: left;
+  padding-left: 15px;
 }
 
 .detail-value {
-    text-align: left;
-    color: #555;
-    padding-right: 15px;
+  text-align: left;
+  color: #555;
+  padding-right: 15px;
 }
 
 .email-link {
-    color: #004d40;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s ease;
+  color: #004d40;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 .email-link:hover {
-    color: #00796b;
-    text-decoration: underline;
+  color: #00796b;
+  text-decoration: underline;
 }
 
 /* Styling for the "Back to List" button */
 .back-button {
-    background-image: linear-gradient(to right, #00796b, #004d40); 
-    color: #ffffff;
-    border: none;
-    padding: 40px 80px;
-    margin-top: 5rem;
-    border-radius: 50px;
-    font-size: 3rem; 
-    font-weight: 600;
-    cursor: pointer;
-    letter-spacing: 0.1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    animation: pulse 2s infinite;
+  background-image: linear-gradient(to right, #00796b, #004d40);
+  color: #ffffff;
+  border: none;
+  padding: 40px 80px;
+  margin-top: 5rem;
+  border-radius: 50px;
+  font-size: 3rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  animation: pulse 2s infinite;
 }
 
 .back-button:hover {
-    background-image: linear-gradient(to right, #004d40, #00796b);
-    transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-    animation-play-state: paused;
+  background-image: linear-gradient(to right, #004d40, #00796b);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  animation-play-state: paused;
 }
 
 .back-button:active {
@@ -262,55 +260,67 @@ body {
 }
 
 @keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.02);
-    }
-    100% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* ==========================================================================
    Responsive Design for smaller screens
    ========================================================================== */
 @media (max-width: 768px) {
-    .container {
-        padding: var(--spacing-sm);
-    }
-    .page-title {
-        font-size: 2rem;
-        margin-bottom: var(--spacing-md);
-    }
-    /* Table specific responsive adjustments */
-    .faculty-table th, .faculty-table td {
-        padding: 10px 15px;
-        font-size: 0.85rem;
-    }
-    /* Adjust column widths for better fit on small screens */
-    .faculty-table th:nth-child(1), .faculty-table td:nth-child(1) { width: 10%; } /* Sr. No. */
-    .faculty-table th:nth-child(2), .faculty-table td:nth-child(2) { width: 40%; } /* Name */
-    .faculty-table th:nth-child(3), .faculty-table td:nth-child(3) { width: 30%; } /* Designation */
-    .faculty-table th:nth-child(4), .faculty-table td:nth-child(4) { width: 20%; } /* Resume */
+  .container {
+    padding: var(--spacing-sm);
+  }
+  .page-title {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+  }
+  /* Table specific responsive adjustments */
+  .faculty-table th,
+  .faculty-table td {
+    padding: 10px 15px;
+    font-size: 0.85rem;
+  }
+  /* Adjust column widths for better fit on small screens */
+  .faculty-table th:nth-child(1),
+  .faculty-table td:nth-child(1) {
+    width: 10%;
+  } /* Sr. No. */
+  .faculty-table th:nth-child(2),
+  .faculty-table td:nth-child(2) {
+    width: 40%;
+  } /* Name */
+  .faculty-table th:nth-child(3),
+  .faculty-table td:nth-child(3) {
+    width: 30%;
+  } /* Designation */
+  .faculty-table th:nth-child(4),
+  .faculty-table td:nth-child(4) {
+    width: 20%;
+  } /* Resume */
 
-
-    .faculty-details-container {
-        padding: 1.5rem;
-    }
-    .faculty-name-details {
-        font-size: 1.8rem;
-    }
-    .faculty-details-table {
-        font-size: 1rem;
-    }
-    .faculty-details-table td {
-        padding: 12px;
-    }
-    .back-button {
-        font-size: 1.2rem;
-        padding: 15px 30px;
-        margin-top: 2rem;
-    }
+  .faculty-details-container {
+    padding: 1.5rem;
+  }
+  .faculty-name-details {
+    font-size: 1.8rem;
+  }
+  .faculty-details-table {
+    font-size: 1rem;
+  }
+  .faculty-details-table td {
+    padding: 12px;
+  }
+  .back-button {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    margin-top: 2rem;
+  }
 }

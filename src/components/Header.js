@@ -343,7 +343,7 @@ const Header = () => {
             </button>
             <ul className={`dropdown-menu ${openDropdown === "courses" ? "open" : ""}`}>
               <li><Link to="/dpharm" onClick={navLinkClicked}>D.Pharm</Link></li>
-              <li><Link to="/bpharm" onClick={navLinkClicked}>B.Pharm</Link></li>
+             
             </ul>
           </li>
 

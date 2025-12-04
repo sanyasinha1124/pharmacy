@@ -13,7 +13,7 @@
    HEADER BANNER
 ================================ */
 .dpharm-header-banner {
-  background: #004d40;
+  background: #14143c;
   text-align: center;
   padding: 3rem 2rem;
   border-radius: 12px;
@@ -63,7 +63,7 @@
 .dpharm-main-content h3 {
   font-size: 1.7rem;
   margin-bottom: 1rem;
-  color: #004d40;
+  color: #14143c;
   font-weight: 600;
 }
 
@@ -83,7 +83,7 @@
 .approval-highlight {
   background: #e9f4f2;
   padding: 1rem 1.2rem;
-  border-left: 5px solid #004d40;
+  border-left: 5px solid #14143c;
   border-radius: 8px;
   margin-top: 1rem;
 }
@@ -103,7 +103,7 @@
 }
 
 .dpharm-sidebar h3 {
-  color: #004d40;
+  color: #14143c;
   margin-bottom: 1rem;
   font-size: 1.4rem;
 }
@@ -129,7 +129,7 @@
 }
 
 .form-group input:focus {
-  border-color: #004d40;
+  border-color: #14143c;
 }
 
 /* ================================

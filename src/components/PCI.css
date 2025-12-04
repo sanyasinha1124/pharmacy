@@ -14,7 +14,7 @@
 
 /* Page Title - Adjusted for centering and consistency with About Institute */
 .page-title {
-    color: #004d40;
+    color:  #001f4d;
     font-size: 2.5em; /* Keeping your size */
     text-align: center; /* Ensure the text is centered */
     margin-bottom: 0; /* Remove bottom margin to bring separator closer */
@@ -45,7 +45,7 @@
 
 /* Button Styling */
 .view-document-btn {
-    background-color: #004d40;
+    background-color: #001f4d;
     color: #fff;
     border: none;
     padding: 1rem 2rem;
@@ -75,7 +75,7 @@
 
 .pdf-loader i {
     font-size: 3em;
-    color: #004d40;
+    color: #001f4d;
     margin-bottom: 1rem;
 }
 

@@ -3,29 +3,31 @@
 .sc-container {
   font-family: "Poppins", sans-serif;
   max-width: 1200px;
-  margin: 3rem auto;
-  padding: 2rem;
+  margin: 2.5rem auto;
+  padding: 2.5rem;
   background: #ffffff;
-  border-radius: 14px;
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+  border-radius: 18px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.14);
+  border-top: 6px solid #001f4d;
 }
 
 .sc-title {
   text-align: center;
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   font-weight: 700;
-  color: #004d40;
+  color: #001f4d;
   margin-bottom: 40px;
   position: relative;
+  letter-spacing: 0.5px;
 }
 
 .sc-title::after {
-  content: "";
-  width: 180px;
+    content: "";
+  width: 200px;
   height: 4px;
   background: #b8904a;
   display: block;
-  margin: 10px auto 0;
+  margin: 14px auto 0;
   border-radius: 3px;
 }
 
@@ -33,54 +35,49 @@
 .sc-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-top: 30px;
+  gap: 32px;
 }
 
 /* CARD */
 .sc-card {
-  background: linear-gradient(
-    135deg,
-    rgba(243, 251, 248, 0.9),
-    rgba(255, 255, 255, 0.9)
-  );
-  border-left: 6px solid #0d8f66;
-  border-radius: 14px;
+  background: #f7fafc;
+  border-radius: 18px;
   padding: 2rem;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  transition: 0.3s ease;
+  border: 1px solid #d9d9d9;
+  border-top: 6px solid #b8904a;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  transition: 0.35s ease;
 }
 
 .sc-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.16);
 }
 
 .sc-card h3 {
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   font-weight: 600;
   color: #b8904a;
-  border-bottom: 2px solid #d1b37a;
-  padding-bottom: 8px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .sc-card p {
   color: #333;
   line-height: 1.6;
-  margin-bottom: 20px;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
 }
 
 /* BUTTON */
 .sc-btn {
   width: 100%;
   padding: 12px;
-  background: #004d40;
+  background: #001f4d;
   color: #fff;
   border: none;
+  border-radius: 30px;
   font-size: 0.95rem;
   font-weight: 600;
-  border-radius: 30px;
   cursor: pointer;
   transition: 0.3s ease;
 }
@@ -90,7 +87,7 @@
   color: #fff;
 }
 
-/* FULLSCREEN PDF VIEWER */
+/* PDF FULLSCREEN VIEWER */
 .sc-overlay {
   position: fixed;
   width: 100vw;
@@ -101,15 +98,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2000;
-  backdrop-filter: blur(6px);
+  z-index: 3000;
+  animation: fadeIn 0.35s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .sc-close-btn {
   position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 3rem;
+  top: 22px;
+  right: 32px;
+  font-size: 3.4rem;
   color: white;
   background: none;
   border: none;
@@ -126,15 +132,22 @@
   width: 90%;
   height: 90%;
   border: none;
+  border-radius: 14px;
   background: #fff;
 }
 
 /* RESPONSIVE */
 @media (max-width: 700px) {
   .sc-container {
-    padding: 1.2rem;
+    padding: 1.5rem;
   }
+
   .sc-title {
-    font-size: 2rem;
+    font-size: 2.1rem;
+  }
+
+  .sc-card {
+    padding: 1.6rem;
   }
 }
+

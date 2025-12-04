@@ -342,7 +342,7 @@ const Header = () => {
               COURSES <span className="caret">▾</span>
             </button>
             <ul className={`dropdown-menu ${openDropdown === "courses" ? "open" : ""}`}>
-              <li><Link to="/dpharm" onClick={navLinkClicked}>D.Pharm</Link></li>
+              <li><Link to="/courses/d-pharm" onClick={navLinkClicked}>D.Pharm</Link></li>
              
             </ul>
           </li>
@@ -359,7 +359,7 @@ const Header = () => {
               aria-haspopup="true"
               aria-expanded={openDropdown === "rd"}
             >
-             EVENTS <span className="caret">▾</span>
+          R&D <span className="caret">▾</span>
             </button>
             <ul className={`dropdown-menu ${openDropdown === "rd" ? "open" : ""}`}>
               <li><Link to="/r&d/publication" onClick={navLinkClicked}>Publication</Link></li>
@@ -387,8 +387,8 @@ const Header = () => {
               EVENTS <span className="caret">▾</span>
             </button>
             <ul className={`dropdown-menu ${openDropdown === "events" ? "open" : ""}`}>
-              <li><Link to="/news" onClick={navLinkClicked}>News</Link></li>
-              <li><Link to="/celebrations" onClick={navLinkClicked}>Celebrations</Link></li>
+              <li><Link to="/events/cultural" onClick={navLinkClicked}>Cultural</Link></li>
+              <li><Link to="/events/sports" onClick={navLinkClicked}>Sports</Link></li>
             </ul>
           </li>
 
@@ -457,7 +457,7 @@ const Header = () => {
               COURSES <span className="caret">▾</span>
             </button>
             <ul className={`mobile-sub ${openDropdown === "m-courses" ? "open" : ""}`}>
-              <li><Link to="/dpharm" onClick={navLinkClicked}>D.Pharm</Link></li>
+              <li><Link to="/courses/d-pharm" onClick={navLinkClicked}>D.Pharm</Link></li>
 
             </ul>
           </li>

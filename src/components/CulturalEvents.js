@@ -384,7 +384,7 @@ const CulturalEvents = () => {
                 }
 
                 .page-title {
-                    color: #004d40;
+                    color: #14143c;
                     font-size: clamp(2rem, 5vw, 2.5rem);
                     margin-bottom: 30px; /* Adjusted margin for the new line */
                     text-align: center;

@@ -1,6 +1,6 @@
 /* Background */
 .auth-container {
-  background: linear-gradient(135deg, #004d40, #00796b);
+  background: linear-gradient(135deg, #14143c, #14143c);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -22,8 +22,14 @@
 
 /* Fade Animation */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Title */
@@ -64,7 +70,7 @@
 .auth-button {
   width: 100%;
   padding: 12px;
-  background: #00bfa5;
+  background: #14143c;
   border: none;
   border-radius: 30px;
   color: white;
@@ -77,13 +83,13 @@
 
 .auth-button:hover {
   transform: translateY(-2px);
-  background: #009e87;
+  background: #14143c;
 }
 
 .secondary-button {
   width: 100%;
   padding: 10px;
-  background: #004d40;
+  background: #14143c;
   color: #fff;
   border: none;
   border-radius: 25px;
@@ -100,10 +106,9 @@
 .toggle-button {
   background: none;
   border: none;
-  color: #00ffe0;
+  color: #14143c;
   cursor: pointer;
   font-weight: bold;
   margin-left: 5px;
   text-decoration: underline;
 }
-

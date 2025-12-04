@@ -1,161 +1,177 @@
 /* src/components/Infrastructure.css */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
-/* Main container for the Infrastructure section */
+/* Theme Colors */
+:root {
+  --navy: #0f1930;
+  --mint: #0f1930;
+  --green: #0a6b4b;
+  --gold: #a08c5c;
+  --light-bg: #fcfcfc;
+}
+
+/* Main container */
 .infrastructure-container {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   padding: 30px;
-  background-color: #fcfcfc;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  background-color: var(--light-bg);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   max-width: 1200px;
   margin: 2rem auto;
+  border-left: 6px solid var(--navy);
 }
 
-/* Page heading styling */
+/* Page Title */
 .infrastructure-container h2 {
-  color: #004d40;
+  color: var(--navy);
   text-align: center;
   margin-bottom: 30px;
-  font-size: 3em;
-  border-bottom: 3px solid #a08c5c;
+  font-size: 2.8em;
+  font-weight: 700;
   padding-bottom: 15px;
+  border-bottom: 4px solid var(--mint);
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(47, 255, 213, 0.3);
 }
 
-/* Introductory paragraph styling */
+/* Intro paragraph */
 .infrastructure-container p {
   font-size: 1.1em;
-  line-height: 1.7;
-  color: #555;
+  line-height: 1.8;
+  color: #444;
   margin-bottom: 40px;
   text-align: center;
-  max-width: 800px;
+  max-width: 850px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Image Gallery Styles */
+/* Section Title (image gallery) */
 .image-gallery h3 {
-  color: #a08c5c; /* Gold for sub-headings */
+  color: var(--gold);
   font-size: 1.8em;
   margin-bottom: 25px;
   text-align: center;
+  font-weight: 700;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 8px;
 }
 
-/* Responsive grid for gallery items */
+/* Grid layout */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: auto;
 }
 
+/* Gallery item card */
 .gallery-item {
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex; /* Use flexbox to align image and title */
-  flex-direction: column;
 }
 
 .gallery-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
 }
 
+/* Image */
 .gallery-item img {
   width: 100%;
-  height: 200px; /* Fixed height for consistency */
+  height: 210px;
   object-fit: cover;
-  display: block;
   transition: transform 0.3s ease;
 }
 
-/* Slight zoom on image hover */
 .gallery-item:hover img {
-  transform: scale(1.05);
+  transform: scale(1.06);
 }
 
-/* Style for the image title */
+/* Image Label */
 .image-title {
   text-align: center;
-  padding: 10px;
+  padding: 12px;
   background-color: #fff;
-  color: #333;
-  font-size: 1em;
+  font-size: 1.05em;
   font-weight: 600;
-  border-top: 1px solid #eee;
+  color: var(--navy);
+  border-top: 2px solid #eee;
 }
 
-/* Lightbox Styles */
+/* Lightbox Background */
 .lightbox-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(15, 25, 48, 0.95);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2000;
-  overflow-y: auto;
+  backdrop-filter: blur(6px);
 }
 
+/* Lightbox Popup */
 .lightbox-content {
   position: relative;
   background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 22px;
+  border-radius: 12px;
   max-width: 90%;
   max-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
+/* Lightbox Image */
 .lightbox-image {
   max-width: 100%;
   max-height: 70vh;
   object-fit: contain;
-  display: block;
-  margin-bottom: 15px;
+  border-radius: 8px;
 }
 
-/* Close button */
+/* Close Button */
 .close-btn {
   position: absolute;
   top: 10px;
-  right: 15px;
-  font-size: 30px;
-  color: #fff;
+  right: 18px;
+  font-size: 32px;
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 2001;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  color: var(--mint);
+  text-shadow: 0 0 10px var(--mint);
 }
 
-/* Navigation buttons */
-.prev-btn, .next-btn {
+/* Navigation Buttons */
+.prev-btn,
+.next-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 40px;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.5);
+  font-size: 36px;
+  padding: 10px 16px;
+  color: var(--mint);
+  background: rgba(15, 25, 48, 0.7);
   border: none;
-  padding: 10px 15px;
   cursor: pointer;
-  z-index: 2001;
   border-radius: 50%;
-  line-height: 1;
+  text-shadow: 0 0 10px var(--mint);
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: rgba(15, 25, 48, 0.9);
 }
 
 .prev-btn {
@@ -166,55 +182,30 @@
   right: 10px;
 }
 
-.prev-btn:hover, .next-btn:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
+/* Caption */
 .image-caption {
-  color: #333;
-  font-size: 1.1em;
+  margin-top: 10px;
   text-align: center;
-  padding: 0 10px;
+  font-size: 1.05em;
+  color: var(--green);
+  font-weight: 600;
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 768px) {
-  .gallery-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-  }
   .gallery-item img {
-    height: 150px;
-  }
-  .lightbox-content {
-    max-width: 95%;
-    padding: 15px;
+    height: 160px;
   }
   .lightbox-image {
     max-height: 60vh;
-  }
-  .prev-btn, .next-btn {
-    font-size: 30px;
-    padding: 8px 12px;
-  }
-  .close-btn {
-    font-size: 25px;
   }
 }
 
 @media (max-width: 480px) {
   .gallery-grid {
     grid-template-columns: 1fr;
-    gap: 10px;
   }
   .gallery-item img {
     height: 180px;
-  }
-  .lightbox-image {
-    max-height: 50vh;
-  }
-  .prev-btn, .next-btn {
-    font-size: 25px;
-    padding: 6px 10px;
   }
 }

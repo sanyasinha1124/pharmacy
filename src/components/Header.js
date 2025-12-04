@@ -422,11 +422,11 @@ const Header = () => {
             <ul className={`mobile-sub ${openDropdown === "m-about" ? "open" : ""}`}>
               <li><Link to="/about-us/institute" onClick={navLinkClicked}>About Institute</Link></li>
               <li><Link to="/about-us/vision-mission" onClick={navLinkClicked}>Vison & Mission</Link></li>
-              <li><Link to="/about-us/gb-cdc" onClick={navLinkClicked}>Message</Link></li>
-              <li><Link to="/about-us/organogram" onClick={navLinkClicked}>GB/CDC</Link></li>
-              <li><Link to="/about-us/infrastructure" onClick={navLinkClicked}>Organogram</Link></li>
-              <li><Link to="/about-us/statutory-committee" onClick={navLinkClicked}>Infrastructure</Link></li>
-               <li><Link to="/about-us/message" onClick={navLinkClicked}>Statutory Committee</Link></li>
+              <li><Link to="/about-us/messages" onClick={navLinkClicked}>Message</Link></li>
+              <li><Link to="/about-us/gb-cdc" onClick={navLinkClicked}>GB/CDC</Link></li>
+              <li><Link to="/about-us/organogram" onClick={navLinkClicked}>Organogram</Link></li>
+              <li><Link to="/about-us/infrastructure" onClick={navLinkClicked}>Infrastructure</Link></li>
+               <li><Link to="/about-us/satutory-committee" onClick={navLinkClicked}>Statutory Committee</Link></li>
             </ul>
           </li>
 

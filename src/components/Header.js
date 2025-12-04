@@ -348,7 +348,29 @@ const Header = () => {
           </li>
 
           <li><Link to="/faculty" onClick={navLinkClicked}>FACULTY</Link></li>
-          <li><Link to="/research" onClick={navLinkClicked}>R&D</Link></li>
+
+           <li
+            className="dropdown"
+            onMouseEnter={() => handleMouseEnter("rd")}
+            onMouseLeave={handleMouseLeave}
+          >
+            <button
+              onClick={() => toggleDropdown("rd")}
+              aria-haspopup="true"
+              aria-expanded={openDropdown === "rd"}
+            >
+             EVENTS <span className="caret">▾</span>
+            </button>
+            <ul className={`dropdown-menu ${openDropdown === "rd" ? "open" : ""}`}>
+              <li><Link to="/r&d/publication" onClick={navLinkClicked}>Publication</Link></li>
+              <li><Link to="/r&d/patent" onClick={navLinkClicked}>Patent</Link></li>
+               <li><Link to="/r&d/copyright" onClick={navLinkClicked}>Copyright</Link></li>
+            </ul>
+          </li>
+          
+
+
+         
           <li><Link to="/iqac" onClick={navLinkClicked}>IQAC</Link></li>
           <li><Link to="/alumni" onClick={navLinkClicked}>ALUMNI</Link></li>
 
@@ -398,9 +420,13 @@ const Header = () => {
               ABOUT US <span className="caret">▾</span>
             </button>
             <ul className={`mobile-sub ${openDropdown === "m-about" ? "open" : ""}`}>
-              <li><Link to="/vision" onClick={navLinkClicked}>Vision & Mission</Link></li>
-              <li><Link to="/principal" onClick={navLinkClicked}>Principal's Desk</Link></li>
-              <li><Link to="/goals" onClick={navLinkClicked}>Goals</Link></li>
+              <li><Link to="/about-us/institute" onClick={navLinkClicked}>Vision & Mission</Link></li>
+              <li><Link to="/about-us/vision-mission" onClick={navLinkClicked}>About Institute</Link></li>
+              <li><Link to="/about-us/gb-cdc" onClick={navLinkClicked}>Message</Link></li>
+              <li><Link to="/about-us/organogram" onClick={navLinkClicked}>GB/CDC</Link></li>
+              <li><Link to="/about-us/infrastructure" onClick={navLinkClicked}>Organogram</Link></li>
+              <li><Link to="/about-us/statutory-committee" onClick={navLinkClicked}>Infrastructure</Link></li>
+               <li><Link to="/about-us/message" onClick={navLinkClicked}>Statutory Committee</Link></li>
             </ul>
           </li>
 
@@ -413,9 +439,12 @@ const Header = () => {
               AFFILIATION <span className="caret">▾</span>
             </button>
             <ul className={`mobile-sub ${openDropdown === "m-affiliation" ? "open" : ""}`}>
-              <li><Link to="/pci" onClick={navLinkClicked}>PCI</Link></li>
-              <li><Link to="/dte" onClick={navLinkClicked}>DTE</Link></li>
-              <li><Link to="/govt" onClick={navLinkClicked}>Govt Approvals</Link></li>
+               <li><Link to="/affiliation/pci" onClick={navLinkClicked}>PCI</Link></li>
+                <li><Link to="/affiliation/msbte" onClick={navLinkClicked}>MSBTE</Link></li>
+                 <li><Link to="/affiliation/govt-of-mah" onClick={navLinkClicked}>GOVT OF MAH</Link></li>
+              <li><Link to="/affiliation/dte" onClick={navLinkClicked}>DTE</Link></li>
+              <li><Link to="/affiliation/aishe" onClick={navLinkClicked}>AISHE</Link></li>
+              <li><Link to="/affiliation/iso" onClick={navLinkClicked}>ISO</Link></li>
             </ul>
           </li>
 
@@ -429,14 +458,46 @@ const Header = () => {
             </button>
             <ul className={`mobile-sub ${openDropdown === "m-courses" ? "open" : ""}`}>
               <li><Link to="/dpharm" onClick={navLinkClicked}>D.Pharm</Link></li>
-              <li><Link to="/bpharm" onClick={navLinkClicked}>B.Pharm</Link></li>
+
             </ul>
           </li>
 
           <li><Link to="/faculty" onClick={navLinkClicked}>FACULTY</Link></li>
-          <li><Link to="/research" onClick={navLinkClicked}>R&D</Link></li>
+          
+          <li>
+            <button
+              className="mobile-toggle"
+              onClick={() => toggleDropdown("m-rd")}
+              aria-expanded={openDropdown === "m-rd"}
+            >
+              R&D <span className="caret">▾</span>
+            </button>
+            <ul className={`mobile-sub ${openDropdown === "m-rd" ? "open" : ""}`}>
+              <li><Link to="/r&d/publication" onClick={navLinkClicked}>Publication</Link></li>
+               <li><Link to="/r&d/patent" onClick={navLinkClicked}>Patent</Link></li>
+               <li><Link to="/r&d/copyright" onClick={navLinkClicked}>Copyright</Link></li>
+              
+
+            </ul>
+          </li>
           <li><Link to="/iqac" onClick={navLinkClicked}>IQAC</Link></li>
           <li><Link to="/alumni" onClick={navLinkClicked}>ALUMNI</Link></li>
+
+              <li>
+            <button
+              className="mobile-toggle"
+              onClick={() => toggleDropdown("m-events")}
+              aria-expanded={openDropdown === "m-events"}
+            >
+              EVENTS <span className="caret">▾</span>
+            </button>
+            <ul className={`mobile-sub ${openDropdown === "m-events" ? "open" : ""}`}>
+              <li><Link to="/events/cultural" onClick={navLinkClicked}>Cultural</Link></li>
+               <li><Link to="/events/sports" onClick={navLinkClicked}>Sports</Link></li>
+               
+
+            </ul>
+          </li>
           <li><Link to="/downloads" onClick={navLinkClicked}>DOWNLOADS</Link></li>
 
           <li>

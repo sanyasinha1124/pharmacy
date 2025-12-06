@@ -46,7 +46,7 @@ import Downloads from './components/Downloads';
 import Faculty from './components/Faculty';
 import FacultyAuth from './components/FacultyAuth';
 
-import MessagePage from "./pages/MessagePage";
+import MessagePage from "./components/MessagePage";
 
 
 function App() {

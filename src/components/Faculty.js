@@ -150,8 +150,8 @@ const Faculty = () => {
           --text-color-light: #6c757d; /* Muted gray for secondary text */
           --text-color-white: #ffffff;
           --link-hover-color: #a7692c; /* Darker bronze for hover states */
-          --nav-green-color: #004d40; /* Dark Green for Navigation */
-          --table-header-bg: #004d40; /* Dark green for table header */
+          --nav-green-color: #14143c;  /* Dark Green for Navigation */
+          --table-header-bg:  #14143c; /* Dark green for table header */
           --table-header-text: #ffffff; /* White text for table header */
           --table-border-color: #e0e0e0; /* Light gray for table borders */
           --table-row-even-bg: #f9f9f9; /* Slightly off-white for even rows */

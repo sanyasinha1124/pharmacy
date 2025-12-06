@@ -195,7 +195,7 @@ const Faculty = () => {
 
         .page-title {
           /* --- CHANGE IS HERE --- */
-          color: #004d40; /* Applied the requested dark green color directly */
+          color:#14143c;/* Applied the requested dark green color directly */
           /* --- END CHANGE --- */
           font-size: clamp(2rem, 5vw, 2.5rem);
           margin-bottom: var(--spacing-md);
@@ -224,7 +224,7 @@ const Faculty = () => {
         }
 
         .faculty-table th {
-            background-color: var(--table-header-bg);
+            background-color:#14143c;
             color: var(--table-header-text);
             font-weight: 600;
             text-transform: uppercase;

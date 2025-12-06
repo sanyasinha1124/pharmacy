@@ -46,6 +46,9 @@ import Downloads from './components/Downloads';
 import Faculty from './components/Faculty';
 import FacultyAuth from './components/FacultyAuth';
 
+import MessagePage from "./pages/MessagePage";
+
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -96,6 +99,9 @@ function App() {
               <Route path="/courses/d-pharm" element={<DPharm />} />
               <Route path="/admission" element={<Admission />} />
               <Route path="/feedback" element={<Feedback />} />
+              <Route path="/about-us/messages" element={<MessagePage />} />
+                     
+
               <Route path="/iqac" element={<IQAC />} />
               <Route path="/naac" element={<NAAC />} />
               <Route path="/nrf" element={<NRF />} />

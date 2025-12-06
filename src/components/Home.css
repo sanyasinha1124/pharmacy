@@ -441,29 +441,72 @@
     font-size: 1rem;
   }
 }
+/* Wrapper */
+.contact-simple {
+  margin-top: 35px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px 30px;
+  border: 1px solid #e5e7eb; /* Light grey border */
+}
 
-@media (max-width: 576px) {
-  .hero-section {
-    height: 80vh;
-  }
-  .hero-text h1 {
-    font-size: 1.8rem;
-  }
-  .hero-text p {
-    font-size: 0.9rem;
-  }
-  .notifications-section h3,
-  .quick-links-section h3,
-  .admission-enquiry-form h2 {
-    font-size: 1.25rem;
-  }
-  .quick-link-box {
-    padding: 1rem;
-  }
-  .quick-link-box p {
-    font-size: 0.8rem;
+/* Heading */
+.contact-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0a1a42; /* Navy */
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Grid layout */
+.contact-grid-simple {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 25px;
+}
+
+/* Label */
+.contact-label-simple {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #64748b; /* Soft gray */
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+/* Value */
+.contact-value-simple {
+  font-size: 1rem;
+  /* color: #1e293b; Darker clean text */
+  color: #0a1a42;
+  line-height: 1.4;
+}
+
+/* Link */
+.contact-link-simple {
+  font-size: 1rem;
+  color: #0a1a42;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-link-simple:hover {
+  text-decoration: underline;
+}
+
+/* Make address full width */
+.address-simple {
+  grid-column: span 2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-grid-simple {
+    grid-template-columns: 1fr;
   }
 }
+
 @media (max-width: 400px) {
   .hero-section {
     height: 60vh;

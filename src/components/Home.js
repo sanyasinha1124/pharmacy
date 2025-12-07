@@ -243,6 +243,8 @@
 // };
 
 // export default Home;
+
+
 import React, { useState } from 'react';
 // import { getFunctions, httpsCallable } from 'firebase/functions';
 //import { app } from '../firebaseConfig';
@@ -357,11 +359,20 @@ const Home = () => {
           {/* Notifications Section */}
           <div className="notifications-section">
             <h3>Latest Notifications</h3>
-            <ul>
+            {/* <ul>
               {notificationsData.map(notification => (
                 <li key={notification.id}>{notification.text}</li>
               ))}
-            </ul>
+            </ul> */}
+
+            <div className="notification-wrapper">
+  <div className="notification-scroll">
+    {notificationsData.map(notif => (
+      <div key={notif.id} className="notification-item">{notif.text}</div>
+    ))}
+  </div>
+</div>
+
           </div>
           
           {/* Quick Links Section */}

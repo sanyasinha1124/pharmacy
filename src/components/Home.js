@@ -441,14 +441,20 @@ const Home = () => {
 
     <div className="contact-item-simple">
       <p className="contact-label-simple">Email</p>
-      <a href="mailto:stipsr.admission@gmail.com" className="contact-link-simple">
+      <a
+        href="mailto:stipsr.admission@gmail.com"
+        className="contact-link-simple"
+      >
         stipsr.admission@gmail.com
       </a>
     </div>
 
     <div className="contact-item-simple">
       <p className="contact-label-simple">Phone</p>
-      <a href="tel:8551954921" className="contact-link-simple">
+      <a
+        href="tel:8551954921"
+        className="contact-link-simple"
+      >
         8551954921
       </a>
     </div>
@@ -456,7 +462,8 @@ const Home = () => {
     <div className="contact-item-simple address-simple">
       <p className="contact-label-simple">Address</p>
       <p className="contact-value-simple">
-        G.S.Tompe Educational Campus, Nanori Road, Chandur Bazar, Amravati 444704
+        G.S. Tompe Educational Campus,  
+        Nanori Road, Chandur Bazar, Amravati - 444704
       </p>
     </div>
 
@@ -464,10 +471,9 @@ const Home = () => {
 </div>
 
 
-
-
   </div>
 </div>
+
 
        
     

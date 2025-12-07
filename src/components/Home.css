@@ -592,3 +592,57 @@
     transform: translateY(-100%);
   }
 }
+/* Extra Mobile Optimisation */
+
+/* Reduce padding on smaller devices */
+@media (max-width: 600px) {
+  .contact-simple {
+    padding: 18px 20px;
+    border-radius: 10px;
+  }
+
+  .contact-title {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .contact-grid-simple {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .contact-item-simple {
+    text-align: left;
+  }
+
+  .contact-label-simple {
+    font-size: 0.75rem;
+  }
+
+  .contact-value-simple,
+  .contact-link-simple {
+    font-size: 0.95rem;
+    word-break: break-word; /* ensures email or address doesn't overflow */
+  }
+}
+
+/* Very small screens */
+@media (max-width: 400px) {
+  .contact-simple {
+    padding: 15px;
+  }
+
+  .contact-title {
+    font-size: 1.2rem;
+  }
+
+  .contact-value-simple,
+  .contact-link-simple {
+    font-size: 0.9rem;
+  }
+
+  .address-simple p {
+    font-size: 0.9rem;
+  }
+}

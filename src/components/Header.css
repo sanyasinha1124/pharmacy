@@ -1,4 +1,3 @@
-/* ---------- VARIABLES ---------- */
 :root {
   --primary: #14143c; /* main blue (logo-friendly) */
   --accent: #ffd166; /* warm yellow accent */
@@ -17,7 +16,6 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
 
 /* ---------- TOP HEADER ---------- */
 .top-header {

@@ -1,109 +1,70 @@
-/* src/components/Home.css */
+/* ---------------------------------------------------------
+   GLOBAL STYLES
+----------------------------------------------------------- */
 
-/* --- Main Content Grid --- */
-.main-content-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin: 2rem auto;
-  padding: 0 2rem;
-  max-width: 1200px;
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f5f7fa;
 }
 
-/* Base styles for card-like sections */
-.notifications-section,
-.quick-links-section,
-.admission-enquiry-form {
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+/* Smooth hover animations everywhere */
+* {
+  transition: 0.25s ease;
 }
 
-.notifications-section h3 {
-  color: #14143c;
-  border-bottom: 2px solid #e0e0e0;
-  padding-bottom: 1rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  font-size: 2rem;
-}
-.quick-links-section h3 {
-  color: #14143c;
-  border-bottom: 2px solid #e0e0e0;
-  padding-bottom: 1rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  font-size: 2rem;
-}
-.admission-enquiry-form h2 {
-  color: #14143c;
-  border-bottom: 2px solid #e0e0e0;
-  padding-bottom: 1rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  font-size: 2rem;
-}
+/* ---------------------------------------------------------
+   HERO SECTION
+----------------------------------------------------------- */
 
-/* Visually hidden class for accessibility */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-/* --- Hero Section --- */
 .hero-section {
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
+  height: 85vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   position: relative;
-  text-align: center;
-  color: white;
+  color: #ffffff;
 }
 
 .hero-section::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
 }
 
 .hero-text {
   position: relative;
   z-index: 2;
-  padding: 1rem;
-  max-width: 900px;
+  text-align: center;
+  padding: 20px;
 }
 
-.hero-text h1 {
-  font-size: 4rem;
-  margin-bottom: 1rem;
+.hero-text h2 {
+  font-size: 3rem;
+  font-weight: 800;
   line-height: 1.2;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-text p {
-  font-size: 1.5rem;
-  opacity: 0.95;
-  line-height: 1.5;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  font-size: 1.2rem;
+  margin-top: 12px;
+  opacity: 0.9;
 }
 
-/* --- Main Content Columns --- */
+/* ---------------------------------------------------------
+   MAIN CONTENT GRID
+----------------------------------------------------------- */
+
+.main-content-grid {
+  max-width: 1250px;
+  margin: 3rem auto;
+  display: flex;
+  gap: 2rem;
+  padding: 0 1.5rem;
+}
+
 .left-column {
   flex: 2;
   display: flex;
@@ -115,395 +76,301 @@
   flex: 1;
 }
 
-/* --- Notifications & Quick Links --- */
-.notifications-section ul {
-  list-style-type: none;
-  padding: 0;
+/* ---------------------------------------------------------
+   NOTIFICATIONS SECTION
+----------------------------------------------------------- */
+
+.notifications-section {
+  background: #ffffff;
+  padding: 1.8rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
-.notifications-section li {
-  padding: 1rem 0;
-  border-bottom: 1px solid #e0e0e0;
+.notifications-section h3 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #0a1a42;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
-.notifications-section li:last-child {
-  border-bottom: none;
+.notification-wrapper {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.notification-scroll {
+  animation: scroll 12s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.notification-item {
+  padding: 10px 0;
+  font-size: 1rem;
+  color: #333;
+  border-bottom: 1px dashed #ddd;
+}
+
+/* ---------------------------------------------------------
+   QUICK LINKS
+----------------------------------------------------------- */
+
+.quick-links-section {
+  background: #ffffff;
+  padding: 1.8rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.quick-links-section h3 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  text-align: center;
+  color: #0a1a42;
+  margin-bottom: 1.5rem;
 }
 
 .quick-links-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 1rem;
 }
 
 .quick-link-box {
-  background-color: #f8f9fa;
-  padding: 1.5rem;
+  background: #f8f9fc;
+  padding: 1.4rem;
   border-radius: 12px;
-  text-align: left;
   text-decoration: none;
   color: #333;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
 }
 
 .quick-link-box:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .quick-link-box h4 {
-  margin: 0;
-  color: #ba965a;
+  color: #0a1a42;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
-.quick-link-box p {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  color: #555;
+.quick-link-icon {
+  width: 36px;
+  height: 36px;
+  color: #b9965b;
 }
 
-/* --- Admission Form --- */
-.admission-enquiry-form .form-group {
-  margin-bottom: 1rem;
-  text-align: left;
-  color: #14143c;
+/* ---------------------------------------------------------
+   ADMISSION ENQUIRY FORM
+----------------------------------------------------------- */
+
+.admission-enquiry-form {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
 }
 
-.admission-enquiry-form label {
-  display: none;
+.admission-enquiry-form h2 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  text-align: center;
+  color: #0a1a42;
+  margin-bottom: 1.5rem;
 }
 
 .admission-enquiry-form input {
   width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  box-sizing: border-box;
-}
-
-.button-group {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.submit-enquiry-btn {
-  width: 100%;
-  padding: 1rem;
-  color: white;
-  border: none;
-  border-radius: 8px;
+  padding: 12px;
+  border: 1px solid #d8dbe2;
+  border-radius: 10px;
+  background: #f9fafc;
   font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-  display: block;
-  text-align: center;
-  transition: background-color 0.3s ease;
+  margin-bottom: 1rem;
 }
 
+.admission-enquiry-form input:focus {
+  border-color: #b9965b;
+  outline: none;
+  background: #ffffff;
+}
+
+.submit-enquiry-btn,
 .join-whatsapp-btn {
-  width: 100%;
-  padding: 1rem;
-  color: white;
-  border: none;
-  border-radius: 8px;
+  padding: 12px;
   font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-  display: block;
-  text-align: center;
-  transition: background-color 0.3s ease;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
 }
 
 .submit-enquiry-btn {
-  background-color: #343a40;
+  background: #0a1a42;
+  color: white;
 }
 
 .submit-enquiry-btn:hover {
-  background-color: #212529;
+  background: #b9965b;
 }
 
 .join-whatsapp-btn {
-  background-color: green;
+  background: #25d366;
+  color: white;
+  text-align: center;
+  display: block;
+  margin-top: 10px;
 }
 
 .join-whatsapp-btn:hover {
-  background-color: #b9965b;
+  background: #1da851;
 }
 
-.submit-enquiry-btn:hover {
-  background-color: #b9965b;
-}
+/* ---------------------------------------------------------
+   CONTACT INFORMATION SECTION
+----------------------------------------------------------- */
 
-/* --- Updated Contact Info Styles --- */
-.contact-info {
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  color: #555;
-  padding: 1.5rem;
-  border-radius: 12px;
-  background-color: #f8f9fa;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-.contact-item {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 1.2rem;
-  gap: 0.75rem;
-}
-
-.contact-item:last-child {
-  margin-bottom: 0;
-}
-
-.contact-icon {
-  flex-shrink: 0;
-  color: #b9965b;
-  font-size: 1.2rem;
-  margin-top: 0.2rem;
-}
-
-.contact-item p {
-  margin: 0;
-  line-height: 1.5;
-  color: #495057;
-}
-
-.contact-name {
-  margin-top: 1rem;
-  text-align: center;
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #343a40;
-}
-
-/* --- OTP Modal Styles --- */
-.otp-modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.otp-modal-content {
-  background-color: #fff;
-  padding: 2.5rem;
-  border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-  width: 90%;
-  max-width: 450px;
-  position: relative;
-  text-align: center;
-  transform: scale(0.95);
-  animation: scaleIn 0.3s ease-out forwards;
-}
-
-@keyframes scaleIn {
-  from {
-    transform: scale(0.95);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-.otp-modal-content h3 {
-  margin-top: 0;
-  color: #343a40;
-  font-size: 1.5rem;
-  border-bottom: 2px solid #e0e0e0;
-  padding-bottom: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.close-btn {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1.5rem;
-  color: #888;
-  transition: color 0.2s ease;
-}
-
-.close-btn:hover {
-  color: #333;
-}
-
-.otp-modal-content input[type="text"] {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  box-sizing: border-box;
-  font-size: 1rem;
-  text-align: center;
-  letter-spacing: 0.5rem;
-}
-
-.status-message {
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-  min-height: 1.5rem;
-}
-
-.status-message.success {
-  color: #28a745;
-}
-
-.status-message.error {
-  color: #dc3545;
-}
-
-.verify-otp-btn {
-  width: 100%;
-  padding: 1rem;
-  background-color: #343a40;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 1rem;
-}
-
-.verify-otp-btn:hover {
-  background-color: #212529;
-}
-
-.verify-otp-btn:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-
-/* --- Responsive Adjustments --- */
-@media (max-width: 1200px) {
-  .hero-text h1 {
-    font-size: 3rem;
-  }
-  .hero-text p {
-    font-size: 1.3rem;
-  }
-}
-
-@media (max-width: 992px) {
-  .main-content-grid {
-    flex-direction: column;
-    padding: 0 1.5rem;
-  }
-  .left-column,
-  .right-column {
-    flex: none;
-    width: 100%;
-  }
-  .hero-text h1 {
-    font-size: 2.5rem;
-  }
-  .hero-text p {
-    font-size: 1.2rem;
-  }
-  .quick-links-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .main-content-grid {
-    gap: 1.5rem;
-    padding: 0 1rem;
-  }
-  .notifications-section,
-  .quick-links-section,
-  .admission-enquiry-form {
-    padding: 1.5rem;
-  }
-  .hero-text h1 {
-    font-size: 2rem;
-  }
-  .hero-text p {
-    font-size: 1rem;
-  }
-}
-/* Wrapper */
 .contact-simple {
-  margin-top: 35px;
   background: #ffffff;
-  border-radius: 12px;
-  padding: 25px 30px;
-  border: 1px solid #e5e7eb; /* Light grey border */
+  padding: 1.8rem;
+  border-radius: 14px;
+  margin-top: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
-/* Heading */
 .contact-title {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-weight: 700;
-  color: #0a1a42; /* Navy */
-  margin-bottom: 20px;
-  text-align: left;
+  color: #0a1a42;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
-/* Grid layout */
 .contact-grid-simple {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18px 25px;
+  gap: 1.2rem 2rem;
 }
 
-/* Label */
 .contact-label-simple {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
+  color: #64748b;
   font-weight: 600;
-  color: #64748b; /* Soft gray */
   text-transform: uppercase;
-  margin-bottom: 4px;
 }
 
-/* Value */
-.contact-value-simple {
-  font-size: 1rem;
-  /* color: #1e293b; Darker clean text */
-  color: #0a1a42;
-  line-height: 1.4;
-}
-
-/* Link */
+.contact-value-simple,
 .contact-link-simple {
-  font-size: 1rem;
   color: #0a1a42;
+  font-size: 1.05rem;
   font-weight: 600;
-  text-decoration: none;
 }
 
 .contact-link-simple:hover {
   text-decoration: underline;
 }
 
-/* Make address full width */
 .address-simple {
   grid-column: span 2;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* ---------------------------------------------------------
+   OTP MODAL
+----------------------------------------------------------- */
+
+.otp-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5000;
+}
+
+.otp-modal-content {
+  background: #ffffff;
+  padding: 2rem;
+  width: 90%;
+  max-width: 420px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.otp-modal-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.otp-modal-content input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d8dbe2;
+  border-radius: 10px;
+  text-align: center;
+  letter-spacing: 8px;
+  font-size: 1.2rem;
+}
+
+.verify-otp-btn {
+  width: 100%;
+  background: #0a1a42;
+  color: white;
+  padding: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.verify-otp-btn:hover {
+  background: #b9965b;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 2rem;
+  color: #666;
+  background: none;
+  border: none;
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE DESIGN
+----------------------------------------------------------- */
+
+@media (max-width: 992px) {
+  .main-content-grid {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-text h2 {
+    font-size: 1.8rem;
+  }
+
   .contact-grid-simple {
     grid-template-columns: 1fr;
+  }
+
+  .notification-wrapper {
+    height: 160px;
   }
 }
 
@@ -511,138 +378,12 @@
   .hero-section {
     height: 60vh;
   }
-  .hero-text h1 {
-    font-size: 1.5rem;
-  }
-}
-.notifications-section ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
 
-.notifications-section li {
-  background: #fff;
-  padding: 12px 16px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  opacity: 0;
-  transform: translateY(15px);
-  animation: fadeUp 0.6s ease forwards;
-}
-
-.notifications-section li:nth-child(1) {
-  animation-delay: 0.1s;
-}
-.notifications-section li:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.notifications-section li:nth-child(3) {
-  animation-delay: 0.3s;
-}
-.notifications-section li:nth-child(4) {
-  animation-delay: 0.4s;
-}
-.notifications-section li:nth-child(5) {
-  animation-delay: 0.5s;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.notifications-section li:hover {
-  transform: scale(1.02);
-  background: #f4f8ff;
-  transition: 0.25s ease;
-}
-.notification-wrapper {
-  height: 160px;
-  overflow: hidden;
-  position: relative;
-}
-
-.notification-scroll {
-  display: flex;
-  flex-direction: column;
-  animation: scrollUp 10s linear infinite;
-}
-
-.notification-item {
-  padding: 12px 16px;
-  background: #ffffff;
-  margin: 6px 0;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
-}
-
-@keyframes scrollUp {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
-}
-/* Extra Mobile Optimisation */
-
-/* Reduce padding on smaller devices */
-@media (max-width: 600px) {
-  .contact-simple {
-    padding: 18px 20px;
-    border-radius: 10px;
+  .hero-text h2 {
+    font-size: 1.6rem;
   }
 
-  .contact-title {
-    font-size: 1.4rem;
-    text-align: center;
-    margin-bottom: 16px;
-  }
-
-  .contact-grid-simple {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .contact-item-simple {
-    text-align: left;
-  }
-
-  .contact-label-simple {
-    font-size: 0.75rem;
-  }
-
-  .contact-value-simple,
-  .contact-link-simple {
-    font-size: 0.95rem;
-    word-break: break-word; /* ensures email or address doesn't overflow */
-  }
-}
-
-/* Very small screens */
-@media (max-width: 400px) {
-  .contact-simple {
-    padding: 15px;
-  }
-
-  .contact-title {
-    font-size: 1.2rem;
-  }
-
-  .contact-value-simple,
-  .contact-link-simple {
-    font-size: 0.9rem;
-  }
-
-  .address-simple p {
-    font-size: 0.9rem;
+  .hero-text p {
+    font-size: 1rem;
   }
 }

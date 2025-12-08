@@ -239,7 +239,7 @@ const Header = () => {
               <li><Link to="/about-us/gb-cdc" onClick={navLinkClicked}>GB/CDC</Link></li>
               <li><Link to="/about-us/organogram" onClick={navLinkClicked}>Organogram</Link></li>
               <li><Link to="/about-us/infrastructure" onClick={navLinkClicked}>Infrastructure</Link></li>
-               <li><Link to="/about-us/satutory-committee" onClick={navLinkClicked}>Statutory Committee</Link></li>
+               <li><Link to="/about-us/statutory-committee" onClick={navLinkClicked}>Statutory Committee</Link></li>
             </ul>
           </li>
 

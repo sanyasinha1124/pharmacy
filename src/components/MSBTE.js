@@ -23,7 +23,7 @@ const MSBTE = () => {
         <div className="msbte-page-container">
             <h2>Maharashtra State Board of Technical Education (MSBTE)</h2>
             <p className="msbte-intro-text">
-                Click the button below to view the official approval document.
+                
             </p>
             
             <div className="msbte-document-section">

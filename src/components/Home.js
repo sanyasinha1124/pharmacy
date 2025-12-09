@@ -341,7 +341,7 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <div className="hero-section" style={{ backgroundImage: `url(${heroImage})` }}>
+       <div className="hero-section" style={{ backgroundImage: `url(${heroImage})` }}>
         <div className="hero-text">
           <h2>
             Welcome To Sumatidevi Tompe <br /> Institute of Pharmaceutical Science and Research
@@ -350,7 +350,12 @@ const Home = () => {
             Your journey towards a bright future in pharmaceutical science begins here.
           </p>
         </div>
-      </div>
+      </div> 
+
+  
+
+
+
 
       {/* Main Content Grid */}
       <div className="main-content-grid">
@@ -504,4 +509,4 @@ const Home = () => {
   );
 };
 
-export default Home;  
+export default Home;

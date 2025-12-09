@@ -69,10 +69,18 @@ const Header = () => {
             <p className="sub-light">
               Approved by PCI & Government of Maharashtra & DTE
               <br />
-              "developing good minds"
+             <p className="sub-light animated-tagline">
+              developing good minds
+              </p>
+
             </p>
+
+        
+</div>
           </div>
-        </div>
+        
+
+
 
         <button
           className={`hamburger ${mobileMenuOpen ? "active" : ""}`}
@@ -135,7 +143,7 @@ const Header = () => {
             <ul className={`dropdown-menu ${openDropdown === "affiliation" ? "open" : ""}`}>
               <li><Link to="/affiliation/pci" onClick={navLinkClicked}>PCI</Link></li>
               <li><Link to="/affiliation/msbte" onClick={navLinkClicked}>MSBTE</Link></li>
-              <li><Link to="/affiliation/gov-of-mah" onClick={navLinkClicked}>Govt Approvals</Link></li>
+              <li><Link to="/affiliation/govt-of-mah" onClick={navLinkClicked}>Govt Approvals</Link></li>
               <li><Link to="/affiliation/dte" onClick={navLinkClicked}>DTE</Link></li>
               <li><Link to="/affiliation/aishe" onClick={navLinkClicked}>AISHE</Link></li>
               <li><Link to="/affiliation/iso" onClick={navLinkClicked}>ISO</Link></li>

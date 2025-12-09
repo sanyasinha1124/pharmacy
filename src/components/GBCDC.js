@@ -47,7 +47,7 @@ const GBCDC = () => {
                 </p>
                 <section className="gb-policy-section">
                     <h3>GB Guidelines</h3>
-                    <p>Click on the button below to view the official document.</p>
+                    <p></p>
                     <div className="document-list">
                         {gbDocuments.map((doc, index) => (
                             <div key={index} className="document-item">
@@ -56,7 +56,7 @@ const GBCDC = () => {
                                     className="view-document-btn"
                                     onClick={() => openPdfViewer(doc.url)}
                                 >
-                                    Click to View Document
+                                     Click to View Document
                                 </button>
                             </div>
                         ))}
@@ -72,7 +72,7 @@ const GBCDC = () => {
                 </p>
                 <section className="cdc-policy-section">
                     <h3>CDC Guidelines</h3>
-                    <p>Click on the button below to view the official document.</p>
+                    <p></p>
                     <div className="document-list">
                         {cdcDocuments.map((doc, index) => (
                             <div key={index} className="document-item">

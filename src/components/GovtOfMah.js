@@ -23,7 +23,7 @@ const GovtOfMah = () => {
         <div className="govt-of-mah-page-container">
             <h2>Official Government Document</h2>
             <p className="govt-of-mah-intro-text">
-                Click the button below to view the official government document.
+                
             </p>
 
             <div className="govt-document-section">

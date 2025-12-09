@@ -23,7 +23,7 @@ const AisheCertificate = () => {
         <div className="aishe-certificate-container">
             <h2>AISHE Certificate</h2>
             <p className="aishe-certificate-intro-text">
-                Click the button below to view the official AISHE certificate.
+                
             </p>
 
             <div className="aishe-document-section">

@@ -23,7 +23,7 @@ const DTE = () => {
         <div className="dte-page-container">
             <h2>Directorate of Technical Education (DTE) Documents</h2>
             <p className="dte-intro-text">
-                Click the button below to view the official DTE document.
+                
             </p>
 
             <div className="dte-document-section">

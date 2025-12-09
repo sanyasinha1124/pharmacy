@@ -1,4 +1,5 @@
 /* src/components/MSBTE.css */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 /* Main container styling */
@@ -19,6 +20,7 @@
     font-size: 2.5em;
     margin-bottom: 20px;
     border-bottom: 3px solid #a08c5c;
+   
     padding-bottom: 10px;
     display: inline-block;
 }

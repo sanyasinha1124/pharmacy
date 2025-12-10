@@ -1,16 +1,38 @@
 // src/components/Organogram.js
-import React from 'react';
+import React from "react";
+import "./Organogram.css";
 
 const Organogram = () => {
   return (
     <div className="organogram-container">
-      <h2>Organizational Chart (Organogram)</h2>
-      <p>
-        Below is the organizational structure of Sumatidevi Tompe Institute, illustrating the hierarchy and reporting relationships within the institution.
+      <h2 className="organogram-title">Organizational Chart (Organogram)</h2>
+
+      <p className="organogram-subtext">
+        The Organogram for Sumatidevi Tompe Institute will be displayed here soon.
       </p>
-      {/* You can embed an image of your organogram or describe it textually */}
-      <img src="/path/to/your/organogram.jpg" alt="Institute Organogram" style={{ maxWidth: '100%', height: 'auto' }} />
-      <p>*(Please replace `/path/to/your/organogram.jpg` with the actual path to your organogram image)*</p>
+
+      {/* Placeholder Design */}
+      <div className="organogram-coming-soon">
+        <div className="node top-node">Principal</div>
+
+        <div className="connector"></div>
+
+        <div className="row">
+          <div className="node">HOD – D.Pharm</div>
+          <div className="node">HOD – B.Pharm</div>
+          <div className="node">Administration</div>
+        </div>
+
+        <div className="connector"></div>
+
+        <div className="row">
+          <div className="node small-node">Faculty</div>
+          <div className="node small-node">Faculty</div>
+          <div className="node small-node">Office Staff</div>
+        </div>
+
+        <p className="coming-soon-text">Detailed Organogram Coming Soon...</p>
+      </div>
     </div>
   );
 };

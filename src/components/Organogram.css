@@ -1,0 +1,74 @@
+.organogram-container {
+  padding: 2rem;
+  max-width: 960px;
+  margin: auto;
+  text-align: center;
+}
+
+.organogram-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0a1a42;
+  margin-bottom: 0.5rem;
+}
+
+.organogram-subtext {
+  color: #64748b;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+/* Placeholder Organogram Box Layout */
+.organogram-coming-soon {
+  padding: 2rem;
+  background: #f7faff;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  border: 1px solid #d9e4f5;
+}
+
+.node {
+  background: white;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid #e7eef7;
+  width: fit-content;
+  margin: auto;
+}
+
+.top-node {
+  background: #0a57a4;
+  color: white;
+  font-size: 1.1rem;
+}
+
+/* Rows */
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.small-node {
+  font-size: 0.95rem;
+}
+
+/* Connector Line */
+.connector {
+  width: 2px;
+  height: 24px;
+  background: #889bb5;
+  margin: 12px auto;
+}
+
+.coming-soon-text {
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  color: #b9965b;
+  font-weight: 700;
+}

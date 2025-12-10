@@ -322,9 +322,9 @@ const Header = () => {
           <li><Link to="/downloads" onClick={navLinkClicked}>DOWNLOADS</Link></li>
 
           <li>
-            <Link className="faculty-btn" to="/faculty-login" onClick={navLinkClicked}>
+            <button className="faculty-btn" to="/faculty-login" onClick={navLinkClicked}>
               FACULTY LOGIN
-            </Link>
+            </button>
           </li>
         </ul>
       </aside>

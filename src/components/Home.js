@@ -272,12 +272,12 @@ import "./Home.css";
 
 // Import Slider Images
 import hero1 from "../images/hero1.jpeg";
-import hero2 from "../images/hero2.jpg";
+// import hero2 from "../images/hero2.jpg";
 import hero3 from "../images/hero3.jpeg";
 import hero4 from "../images/hero4.jpeg";
 
 // Slider Images Array
-const sliderImages = [hero1, hero2, hero3, hero4];
+const sliderImages = [hero1, hero3, hero4];
 
 // Data for notifications and quick links
 const notificationsData = [

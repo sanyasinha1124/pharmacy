@@ -272,14 +272,6 @@ a {
 }
 
 /* FACULTY button style */
-.faculty-btn {
-  background: var(--accent);
-  color: navy;
-  padding: 8px 14px;
-  border-radius: 999px;
-  font-weight: 700;
-  background-color: #b9965b;
-}
 
 /* ----------------------------------------------
    FACULTY BUTTON — RECTANGULAR ACCENT
@@ -402,3 +394,25 @@ button:focus {
     transform: scale(1) translateY(0);
   }
 }  */
+.faculty-btn {
+  padding: 10px 20px;
+  background: white; /* or any accent color */
+  color: white;
+  border: none;
+  border-radius: 8px; /* Smooth corners */
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth hover animation */
+}
+
+.faculty-btn:hover {
+  /* Slightly lighter shade */
+  transform: translateY(-2px); /* Subtle lift effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.faculty-btn:active {
+  transform: translateY(0); /* Reset on click */
+  box-shadow: none;
+}

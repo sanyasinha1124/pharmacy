@@ -416,3 +416,34 @@ button:focus {
   transform: translateY(0); /* Reset on click */
   box-shadow: none;
 }
+
+/* =========================================
+   SMALL SCREEN LAPTOPS (1024px – 1280px)
+========================================= */
+@media (max-width: 1280px) and (min-width: 1025px) {
+  .inst-logo {
+    height: 75px; /* reduce logo size */
+  }
+
+  .inst-text h1 {
+    font-size: 1.6rem; /* reduce title size */
+  }
+
+  .inst-text .sub-light {
+    font-size: 0.85rem; /* smaller subtitle */
+  }
+
+  .nav-links a {
+    font-size: 0.9rem; /* smaller menu text */
+    padding: 6px 0;
+  }
+
+  .faculty-btn {
+    padding: 6px 14px;
+    font-size: 0.9rem;
+  }
+
+  .nav-bar {
+    height: 50px; /* slightly compact navbar */
+  }
+}

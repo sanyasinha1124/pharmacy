@@ -265,7 +265,6 @@
 // };
 
 // export default Home;
-
 import React, { useState, useEffect } from "react";
 import { Book, Calendar, FlaskConical, Headset } from "lucide-react";
 import "./Home.css";
@@ -302,7 +301,7 @@ const Home = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % sliderImages.length);
-    }, 3000); // 3 seconds per slide
+    }, 3000);
     return () => clearInterval(timer);
   }, []);
 
@@ -319,29 +318,59 @@ const Home = () => {
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  // Handle changes to the form input fields
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value
-    }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
+
+  // const handleSendAdmissionOtp = async (e) => {
+  //   e.preventDefault();
+  //   setIsLoading(true);
+  //   setMessage("");
+
+  //   try {
+  //     setMessage("OTP sent to your email. Please check your inbox.");
+  //     setIsModalOpen(true);
+  //   } catch {
+  //     setMessage("Error sending OTP. Please try again.");
+  //   } finally {
+  //     setIsLoading(false);
+  //   }
+  // };
 
   const handleSendAdmissionOtp = async (e) => {
-    e.preventDefault();
-    setIsLoading(true);
-    setMessage("");
+  e.preventDefault();
+  setIsLoading(true);
 
-    try {
-      setMessage("OTP sent to your email. Please check your inbox.");
-      setIsModalOpen(true);
-    } catch (error) {
-      setMessage("Error sending OTP. Please try again.");
-    } finally {
-      setIsLoading(false);
+  try {
+    const res = await fetch("http://localhost:5000/api/enquiry", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      alert("Details sent to admission office!");
+      setFormData({
+        fullName: "",
+        hscPercentage: "",
+        email: "",
+        contactNumber: "",
+      });
+    } else {
+      alert("Submission failed");
     }
-  };
+  } catch (error) {
+    alert("Server error");
+  } finally {
+    setIsLoading(false);
+  }
+};
+
 
   const handleVerifyAdmissionOtp = async (e) => {
     e.preventDefault();
@@ -350,10 +379,15 @@ const Home = () => {
 
     try {
       setMessage("Enquiry submitted successfully!");
-      setFormData({ fullName: "", hscPercentage: "", email: "", contactNumber: "" });
+      setFormData({
+        fullName: "",
+        hscPercentage: "",
+        email: "",
+        contactNumber: ""
+      });
       setOtp("");
       setIsModalOpen(false);
-    } catch (error) {
+    } catch {
       setMessage("Invalid OTP. Please try again.");
     } finally {
       setIsLoading(false);
@@ -370,18 +404,17 @@ const Home = () => {
               key={index}
               className={`slide ${index === currentSlide ? "active" : ""}`}
               style={{ backgroundImage: `url(${img})` }}
-            ></div>
+            />
           ))}
         </div>
 
-        {/* Slider Dots */}
         <div className="slider-dots">
           {sliderImages.map((_, index) => (
             <span
               key={index}
               className={`dot ${index === currentSlide ? "active" : ""}`}
               onClick={() => setCurrentSlide(index)}
-            ></span>
+            />
           ))}
         </div>
       </div>
@@ -392,7 +425,6 @@ const Home = () => {
           {/* Notifications */}
           <div className="notifications-section">
             <h3>Latest Notifications</h3>
-
             <div className="notification-wrapper">
               <div className="notification-scroll">
                 {notificationsData.map((notif) => (
@@ -419,7 +451,7 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Right Column */}
+         {/* Right Column */}
         <div className="right-column">
           <div className="admission-enquiry-form">
             <h2>Admission Enquiry Form</h2>
@@ -480,39 +512,23 @@ const Home = () => {
                 </a>
               </div>
             </form>
-          </div>
+          </div>  
 
           {/* Contact Info */}
           <div className="contact-simple">
             <h2 className="contact-title">Contact Information</h2>
-
             <div className="contact-grid-simple">
-              <div className="contact-item-simple">
-                <p className="contact-label-simple">Name</p>
-                <p className="contact-value-simple">Sangam Nimkar</p>
+              <div>
+                <p>Name</p>
+                <p>Sangam Nimkar</p>
               </div>
-
-              <div className="contact-item-simple">
-                <p className="contact-label-simple">Email</p>
-                <a href="mailto:stipsr.admission@gmail.com" className="contact-link-simple">
-                  stipsr.admission@gmail.com
-                </a>
+              <div>
+                <p>Email</p>
+                <a href="mailto:stipsr.admission@gmail.com">stipsr.admission@gmail.com</a>
               </div>
-
-              <div className="contact-item-simple">
-                <p className="contact-label-simple">Phone</p>
-                <a href="tel:8551954921" className="contact-link-simple">
-                  8551954921
-                </a>
-              </div>
-
-              <div className="contact-item-simple address-simple">
-                <p className="contact-label-simple">Address</p>
-                <p className="contact-value-simple">
-                  G.S. Tompe Educational Campus,
-                  <br />
-                  Nanori Road, Chandur Bazar, Amravati - 444704
-                </p>
+              <div>
+                <p>Phone</p>
+                <a href="tel:8551954921">8551954921</a>
               </div>
             </div>
           </div>
@@ -523,24 +539,9 @@ const Home = () => {
       {isModalOpen && (
         <div className="otp-modal-overlay">
           <div className="otp-modal-content">
-            <button onClick={() => setIsModalOpen(false)} className="close-btn">
-              &times;
-            </button>
-            <h3>Verify Your Email</h3>
-            <p>An OTP has been sent to {formData.email}</p>
-            {message && <p className="status-message">{message}</p>}
             <form onSubmit={handleVerifyAdmissionOtp}>
-              <input
-                type="text"
-                value={otp}
-                onChange={(e) => setOtp(e.target.value)}
-                maxLength="6"
-                placeholder="Enter 6-digit OTP"
-                required
-              />
-              <button type="submit" className="verify-otp-btn" disabled={isLoading}>
-                {isLoading ? "Verifying..." : "Verify OTP"}
-              </button>
+              <input value={otp} onChange={(e) => setOtp(e.target.value)} placeholder="Enter OTP" required />
+              <button type="submit">Verify OTP</button>
             </form>
           </div>
         </div>

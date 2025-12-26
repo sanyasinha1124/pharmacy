@@ -1,108 +1,217 @@
-import React, { useState } from 'react';
-import './GBCDC.css'; // This will now use the corrected CSS
+// import React, { useState } from 'react';
+// import './GBCDC.css'; // This will now use the corrected CSS
 
-/**
- * The GBCDC component displays information about the Governing Body (GB)
- * and the College Development Committee (CDC).
- * This version displays all documents as PDF files in a modal viewer.
- */
-const GBCDC = () => {
-    // State to hold the URL of the PDF to be displayed in full screen.
-    const [selectedPdfUrl, setSelectedPdfUrl] = useState(null);
+// /**
+//  * The GBCDC component displays information about the Governing Body (GB)
+//  * and the College Development Committee (CDC).
+//  * This version displays all documents as PDF files in a modal viewer.
+//  */
+// const GBCDC = () => {
+//     // State to hold the URL of the PDF to be displayed in full screen.
+//     const [selectedPdfUrl, setSelectedPdfUrl] = useState(null);
 
-    // Define the documents with their titles and PDF URLs.
-    // NOTE: You must place your actual PDF files in the correct public directory
-    // and update these URLs accordingly.
-    const gbDocuments = [
-        { title: "Governing Body Guidelines - Part 1", url: "/GB-DOC.pdf" },
-    ];
+//     // Define the documents with their titles and PDF URLs.
+//     // NOTE: You must place your actual PDF files in the correct public directory
+//     // and update these URLs accordingly.
+//     const gbDocuments = [
+//         { title: "", url: "/GB-DOC.pdf" },
+//     ];
     
-    const cdcDocuments = [
-        { title: "College Development Committee Guidelines", url: "/CDC-DOC.pdf" }
-    ];
+//     const cdcDocuments = [
+//         { title: "", url: "/CDC-DOC.pdf" }
+//     ];
 
-    // Function to open the PDF viewer with a specific URL.
-    const openPdfViewer = (pdfUrl) => {
-        setSelectedPdfUrl(pdfUrl);
-    };
+//     // Function to open the PDF viewer with a specific URL.
+//     const openPdfViewer = (pdfUrl) => {
+//         setSelectedPdfUrl(pdfUrl);
+//     };
 
-    // Function to close the PDF viewer.
-    const closePdfViewer = () => {
-        setSelectedPdfUrl(null);
-    };
+//     // Function to close the PDF viewer.
+//     const closePdfViewer = () => {
+//         setSelectedPdfUrl(null);
+//     };
 
-    return (
-        <div className="gbcdc-container">
-            <div className="gbcdc-header-banner">
-                <h2>Empowering Academic & Institutional Growth</h2>
-                <p>Guiding the future of pharmacy education through strategic vision.</p>
-            </div>
+//     return (
+//         <div className="gbcdc-container">
+//             <div className="gbcdc-header-banner">
+//                 <h2>Empowering Academic & Institutional Growth</h2>
+//                 <p>Guiding the future of pharmacy education through strategic vision.</p>
+//             </div>
             
-            <section className="gb-section">
-                <h3>Governing Body (GB)</h3>
-                <p>
-                    The Governing Body is the apex statutory body responsible for the overall governance and strategic direction
-                    of the institute. It oversees financial planning, policy-making, and long-term development plans to
-                    ensure institutional excellence.
-                </p>
-                <section className="gb-policy-section">
-                    <h3>GB Guidelines</h3>
-                    <p></p>
-                    <div className="document-list">
-                        {gbDocuments.map((doc, index) => (
-                            <div key={index} className="document-item">
-                                <span className="document-title">{doc.title}</span>
-                                <button
-                                    className="view-document-btn"
-                                    onClick={() => openPdfViewer(doc.url)}
-                                >
-                                     Click to View Document
-                                </button>
-                            </div>
-                        ))}
-                    </div>
-                </section>
-            </section>
+//             <section className="gb-section">
+//                 <h3>Governing Body (GB)</h3>
+//                 <p>
+//                     The Governing Body is the apex statutory body responsible for the overall governance and strategic direction
+//                     of the institute. It oversees financial planning, policy-making, and long-term development plans to
+//                     ensure institutional excellence.
+//                 </p>
+//                  <section className="gb-policy-section">
+//                     <h3>GB Guidelines</h3>
+//                     <p></p>
+//                     <div className="document-list">
+//                         {gbDocuments.map((doc, index) => (
+//                             <div key={index} className="document-item">
+//                                 <span className="document-title">{doc.title}</span>
+//                                 <button
+//                                     className="view-document-btn"
+//                                     onClick={() => openPdfViewer(doc.url)}
+//                                 >
+//                                     View Document
+//                                 </button>
+//                             </div>
+//                         ))}
+//                     </div>
+//                 </section> 
+//             </section>
 
-            <section className="cdc-section">
-                <h3>College Development Committee (CDC)</h3>
-                <p>
-                    The College Development Committee (CDC) formulates institutional policies and guides academic planning,
-                    infrastructure development, and quality improvement measures, ensuring adherence to regulatory guidelines.
-                </p>
-                <section className="cdc-policy-section">
-                    <h3>CDC Guidelines</h3>
-                    <p></p>
-                    <div className="document-list">
-                        {cdcDocuments.map((doc, index) => (
-                            <div key={index} className="document-item">
-                                <span className="document-title">{doc.title}</span>
-                                <button
-                                    className="view-document-btn"
-                                    onClick={() => openPdfViewer(doc.url)}
-                                >
-                                    Click to View Document
-                                </button>
-                            </div>
-                        ))}
-                    </div>
-                </section>
-            </section>
+//             <section className="cdc-section">
+//                 <h3>College Development Committee (CDC)</h3>
+//                 <p>
+//                     The College Development Committee (CDC) formulates institutional policies and guides academic planning,
+//                     infrastructure development, and quality improvement measures, ensuring adherence to regulatory guidelines.
+//                 </p>
+//                 <section className="cdc-policy-section">
+//                     <h3>CDC Guidelines</h3>
+//                     <p></p>
+//                     <div className="document-list">
+//                         {cdcDocuments.map((doc, index) => (
+//                             <div key={index} className="document-item">
+//                                 <span className="document-title">{doc.title}</span>
+//                                 <button
+//                                     className="view-document-btn"
+//                                     onClick={() => openPdfViewer(doc.url)}
+//                                 >
+//                                     View Document
+//                                 </button>
+//                             </div>
+//                         ))}
+//                     </div>
+//                 </section>
+//             </section>
 
-            {/* Full-screen Modal for PDF Viewer */}
-            {selectedPdfUrl && (
-                <div className="fullscreen-overlay" onClick={closePdfViewer}>
-                    <button className="close-button" onClick={closePdfViewer}>&times;</button>
-                    <iframe
-                        className="pdf-viewer-iframe"
-                        src={`${selectedPdfUrl}#toolbar=0`}
-                        title="Document Viewer"
-                        frameBorder="0"
-                    />
-                </div>
-            )}
+//             {/* Full-screen Modal for PDF Viewer */}
+//             {selectedPdfUrl && (
+//                 <div className="fullscreen-overlay" onClick={closePdfViewer}>
+//                     <button className="close-button" onClick={closePdfViewer}>&times;</button>
+//                     <iframe
+//                         className="pdf-viewer-iframe"
+//                         src={`${selectedPdfUrl}#toolbar=0`}
+//                         title="Document Viewer"
+//                         frameBorder="0"
+//                     />
+//                 </div>
+//             )}
+//         </div>
+//     );
+// };
+
+// export default GBCDC;
+
+
+
+import React, { useState } from "react";
+import "./GBCDC.css";
+
+const GBCDC = () => {
+  const [selectedPdfUrl, setSelectedPdfUrl] = useState(null);
+
+  const gbDocuments = [
+    { title: "Governing Body Guidelines & Policies", url: "/GB-DOC.pdf" },
+  ];
+
+  const cdcDocuments = [
+    { title: "College Development Committee Guidelines", url: "/CDC-DOC.pdf" },
+  ];
+
+  const openPdfViewer = (pdfUrl) => setSelectedPdfUrl(pdfUrl);
+  const closePdfViewer = () => setSelectedPdfUrl(null);
+
+  return (
+    <div className="gbcdc-container">
+      {/* Header */}
+      <div className="gbcdc-header-banner">
+        <h2>Governance & Development Committees</h2>
+        <p>
+          Driving academic excellence and institutional growth through structured
+          governance.
+        </p>
+      </div>
+
+      {/* Governing Body */}
+      <section className="gb-section">
+        <h3>Governing Body (GB)</h3>
+        <p className="section-text">
+          The Governing Body is the apex statutory authority responsible for
+          strategic planning, policy formulation, financial oversight, and
+          institutional governance.
+        </p>
+
+        <div className="document-list">
+          {gbDocuments.map((doc, index) => (
+            <div key={index} className="document-card">
+              <div className="document-info">
+                {/* <h4>{doc.title}</h4>
+                <span className="doc-tag">PDF Document</span> */}
+              </div>
+
+              <button
+                className="view-document-btn"
+                onClick={() => openPdfViewer(doc.url)}
+              >
+                View
+              </button>
+            </div>
+          ))}
         </div>
-    );
+      </section>
+
+      {/* CDC */}
+      <section className="cdc-section">
+        <h3>College Development Committee (CDC)</h3>
+        <p className="section-text">
+          The College Development Committee (CDC) guides academic planning,
+          infrastructure development, quality enhancement, and regulatory
+          compliance.
+        </p>
+
+        <div className="document-list">
+          {cdcDocuments.map((doc, index) => (
+            <div key={index} className="document-card">
+              <div className="document-info">
+                {/* <h4>{doc.title}</h4>
+                <span className="doc-tag">PDF Document</span> */}
+              </div>
+
+              <button
+                className="view-document-btn"
+                onClick={() => openPdfViewer(doc.url)}
+              >
+                View
+              </button>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* PDF Viewer */}
+      {selectedPdfUrl && (
+        <div className="fullscreen-overlay">
+          <div className="pdf-header">
+            <span>Document Viewer</span>
+            <button className="close-button" onClick={closePdfViewer}>
+              ✕
+            </button>
+          </div>
+
+          <iframe
+            className="pdf-viewer-iframe"
+            src={`${selectedPdfUrl}#toolbar=0`}
+            title="PDF Viewer"
+          />
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default GBCDC;

@@ -401,7 +401,7 @@ button:focus {
 }  */
 .faculty-btn {
   padding: 10px 20px;
-  background: white; /* or any accent color */
+  background: primary; /* or any accent color */
   color: white;
   border: none;
   border-radius: 8px; /* Smooth corners */

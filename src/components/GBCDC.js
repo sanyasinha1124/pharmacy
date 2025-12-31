@@ -158,7 +158,7 @@ const GBCDC = () => {
                 className="view-document-btn"
                 onClick={() => openPdfViewer(doc.url)}
               >
-                View
+                View Document
               </button>
             </div>
           ))}
@@ -186,7 +186,7 @@ const GBCDC = () => {
                 className="view-document-btn"
                 onClick={() => openPdfViewer(doc.url)}
               >
-                View
+                View Document
               </button>
             </div>
           ))}

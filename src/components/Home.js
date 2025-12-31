@@ -315,7 +315,8 @@ const Home = () => {
 
   const [otp, setOtp] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [message, setMessage] = useState("");
+  // const [message, setMessage] = useState("");
+  const [, setMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
   const handleInputChange = (e) => {
